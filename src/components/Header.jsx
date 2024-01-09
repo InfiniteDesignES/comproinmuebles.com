@@ -1,5 +1,5 @@
 export default function Header(){
     return(
-        <div className="bg-red-50">Hola ComproInmuebles</div>
+        <header className="bg-red-50 fixed top-4">Hola ComproInmuebles</header>
     )
 }
