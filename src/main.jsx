@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 
 import Index from './pages/Index.jsx'
 
-import './styles/Index.css'
+import './styles/Tailwind.css'
+import './styles/Main.css'
 
 import {
   createBrowserRouter,
