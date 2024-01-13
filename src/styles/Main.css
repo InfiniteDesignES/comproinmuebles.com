@@ -1,10 +1,13 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #fff;
-  text-align: right;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 120% */
   letter-spacing: -0.2px;
+}
+
+.header-text {
+  text-align: right;
 }

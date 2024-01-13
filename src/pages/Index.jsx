@@ -1,9 +1,11 @@
-import Header from "../components/Header";
+import Layout from '../layout/Layout';
 
 export default function Index() {
   return (
-    <main className="h-[150rem]">
-      <Header />
-    </main>
+    <Layout>
+      <section className='h-screen bg-[url("../../public/images/Background.svg")] bg-cover'>
+        
+      </section>
+    </Layout>
   );
 }
