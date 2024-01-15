@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import Index from './pages/Index.jsx'
+import InformacionVivienda from './components/InformacionVivienda.jsx'
 
 import './styles/Tailwind.css'
 import './styles/Main.css'
@@ -15,7 +16,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
+  },
+  {
+    path: "/sell",
+    element: <InformacionVivienda />,
   }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
