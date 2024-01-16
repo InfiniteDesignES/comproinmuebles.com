@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 
-
 export default function InformacionVivienda() {
     const {
         register,
@@ -45,10 +44,10 @@ export default function InformacionVivienda() {
                 <label htmlFor="puerta" className="text-[11px] mt-2">
                     <span className="text-[var(--color-texto-secundario)]">Puerta <span className="text-[var(--color-rojo)]">*</span></span>
                     <br />
-                    <input type="number" {...register("puerta")} id="puerta" className="w-full h-10 pl-4" min={0} />
+                    <input type="number" {...register("puerta", { required: true })} id="puerta" className="w-full h-10 pl-4" min={0} />
                 </label>
             </div>
-            {errors.direccion && <span className="text-[var(--color-rojo)] text-sm mt-4">Por favor completa todos los campos</span>}
+            {(errors.direccion || errors.codigo_postal || errors.numero_portal) && (<span className="text-[var(--color-rojo)] text-sm mt-4">Por favor completa todos los campos</span>)}
             <div className="w-full h-[1px] bg-[var(--color-borde)] my-10">
             </div>
             <div className="w-full min-h-[200px] rounded-md border border-[var(--color-borde)]">
