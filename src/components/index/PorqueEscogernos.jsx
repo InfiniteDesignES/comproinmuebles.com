@@ -1,4 +1,5 @@
 import VenderAhora from '../botones/VenderAhora';
+import NumeroDinamico from '../dinamicos/Numero';
 
 export default function PorqueEscogernos() {
   return (
@@ -10,19 +11,22 @@ export default function PorqueEscogernos() {
       </p>
       <article className="flex justify-center items-center gap-20 py-12">
         <div className="w-[350px] ">
-          <img src="public/images/index/Forms.svg" alt="Formulario" />
+        <NumeroDinamico numero={1} />
+          <img src="images/index/Fast.svg" alt="Formulario" />
           <p className="font-medium text-lg text-0 text-center">
             Rellena nuestro formulario rápidamente desde cualquier sitio
           </p>
         </div>
         <div className="w-[350px] ">
-          <img src="public/images/index/Office.svg" alt="Formulario" />
+        <NumeroDinamico numero={2} />
+          <img src="images/index/Lawyer.svg" alt="Formulario" />
           <p className="font-medium text-lg text-0 text-center">
             Analizaremos el inmueble y recibirás una oferta por la vivienda
           </p>
         </div>
         <div className="w-[350px] ">
-          <img src="public/images/index/Business.svg" alt="Formulario" />
+        <NumeroDinamico numero={3} />
+          <img src="images/index/Strategic.svg" alt="Formulario" />
           <p className="font-medium text-lg text-0 text-center">
             Recibe el dinero por tu vivienda en menos de 1 semana
           </p>
