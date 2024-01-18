@@ -4,6 +4,7 @@ import Titulo from '../components/index/Titulo.jsx';
 import ComoFunciona from '../components/index/ComoFunciona.jsx';
 import PorqueEscogernos from '../components/index/PorqueEscogernos.jsx';
 import Opiniones from '../components/index/Opiniones.jsx';
+import PreguntasFrecuentes from '../components/index/PreguntasFrecuentes.jsx';
 
 export default function Index() {
   return (
@@ -41,6 +42,9 @@ export default function Index() {
             secundario={true}
           />
         </main>
+      </section>
+      <section className="border-t mx-12 rounded-none border-02">
+        <PreguntasFrecuentes />
       </section>
     </Layout>
   );
