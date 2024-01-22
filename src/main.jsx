@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import Index from './pages/Index.jsx'
 import InformacionVivienda from './components/InformacionVivienda.jsx'
+import TipoVivienda from './components/TipoVivienda.jsx'
 
 import './styles/Tailwind.css'
 import './styles/Main.css'
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sell",
-    element: <InformacionVivienda />,
+    element: <TipoVivienda />,
   }
 
 ]);

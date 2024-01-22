@@ -12,6 +12,8 @@ body {
   --color-borde: #cbd2e0;
   --color-rojo: #ff0000;
   --color-texto-secundario: #7d7d7d;
+  --azul-secundario: #04384d;
+  --fondo-informacion-vivienda: rgba(255, 255, 255, 0.85);
 }
 
 .header-text {
