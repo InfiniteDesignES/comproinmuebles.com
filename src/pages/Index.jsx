@@ -4,7 +4,9 @@ import Titulo from '../components/index/Titulo.jsx';
 import ComoFunciona from '../components/index/ComoFunciona.jsx';
 import PorqueEscogernos from '../components/index/PorqueEscogernos.jsx';
 import Opiniones from '../components/index/Opiniones.jsx';
-import PreguntasFrecuentes from '../components/index/PreguntasFrecuentes.jsx';
+
+import InfoPregunta from '../components/index/PreguntasFrecuentes/InfoPregunta.jsx';
+import ContenedorPregunta from '../components/index/PreguntasFrecuentes/ContenedorPregunta.jsx';
 
 export default function Index() {
   return (
@@ -44,7 +46,11 @@ export default function Index() {
         </main>
       </section>
       <section className="border-t mx-12 rounded-none border-02">
-        <PreguntasFrecuentes />
+        <ContenedorPregunta>
+          <InfoPregunta pregunta="¿Cuál es tu pregunta?" respuesta="Esta es la respuesta." />
+          <InfoPregunta pregunta="¿Cuál es tu pregunta?" respuesta="Esta es la respuesta." />
+          <InfoPregunta pregunta="¿Cuál es tu pregunta?" respuesta="Esta es la respuesta." />
+        </ContenedorPregunta>
       </section>
     </Layout>
   );
