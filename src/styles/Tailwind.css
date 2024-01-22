@@ -24,4 +24,9 @@
     margin: 0;
     -moz-appearance: textfield !important;
   }
+  
+@layer components {
+  .gradiente {
+    background-image: linear-gradient(135deg, #2CD9FF 0%, #009FD4 100%);
+  }
 }
