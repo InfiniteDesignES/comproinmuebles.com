@@ -5,6 +5,9 @@ import ComoFunciona from '../components/index/ComoFunciona.jsx';
 import PorqueEscogernos from '../components/index/PorqueEscogernos.jsx';
 import Opiniones from '../components/index/Opiniones.jsx';
 
+import InfoPregunta from '../components/index/PreguntasFrecuentes/InfoPregunta.jsx';
+import ContenedorPregunta from '../components/index/PreguntasFrecuentes/ContenedorPregunta.jsx';
+
 export default function Index() {
   return (
     <Layout>
@@ -41,6 +44,13 @@ export default function Index() {
             secundario={true}
           />
         </main>
+      </section>
+      <section className="border-t mx-12 rounded-none border-02">
+        <ContenedorPregunta>
+          <InfoPregunta pregunta="¿Cuál es tu pregunta?" respuesta="Esta es la respuesta." />
+          <InfoPregunta pregunta="¿Cuál es tu pregunta?" respuesta="Esta es la respuesta." />
+          <InfoPregunta pregunta="¿Cuál es tu pregunta?" respuesta="Esta es la respuesta." />
+        </ContenedorPregunta>
       </section>
     </Layout>
   );
