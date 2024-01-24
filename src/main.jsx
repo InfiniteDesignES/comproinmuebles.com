@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import RelacionExterior from './components/RelacionExterior.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sell",
-    element: <TipoVivienda />,
+    element: <RelacionExterior />,
   }
 
 ]);
