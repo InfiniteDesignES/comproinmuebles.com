@@ -24,6 +24,7 @@
     margin: 0;
     -moz-appearance: textfield !important;
   }
+}
   
 @layer components {
   .gradiente {

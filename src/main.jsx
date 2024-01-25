@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
+    path: "/buy",
+    element: <InformacionVivienda />,
+  },
+  {
     path: "/sell",
     element: <TipoVivienda />,
   }
