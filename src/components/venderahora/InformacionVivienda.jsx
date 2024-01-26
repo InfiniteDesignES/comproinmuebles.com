@@ -25,8 +25,15 @@ export default function InformacionVivienda() {
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors }
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      codigo_postal: '' // Establece un valor inicial vacío o adecuado
+    }
+  });
+
+  const codigoPostal = watch('codigo_postal');
 
   const onsubmit = (data) => {
     console.log(data);
@@ -39,6 +46,13 @@ export default function InformacionVivienda() {
     [setValue]
   );
 
+  const handleSelectAddressCP = useCallback(
+    (cpValue) => {
+      setValue('codigo_postal', cpValue); // Asegúrate de que cpValue contenga el código postal
+    },
+    [setValue]
+  );
+
   const handleSelectAddressCoords = useCallback(
     (addresscoords) => {
       setValue('coordenadas', addresscoords);
@@ -46,6 +60,8 @@ export default function InformacionVivienda() {
     },
     [setValue, setCenter]
   );
+
+  // hay que hacer tambien el codigo postal
 
   return (
     <form
@@ -61,6 +77,7 @@ export default function InformacionVivienda() {
         required={true}
         onSelect={handleSelectAddress}
         onSelectCoords={handleSelectAddressCoords}
+        onSelectCP={handleSelectAddressCP}
       />
 
       <div className="w-full flex flex-col md:grid md:grid-cols-6 gap-2">
@@ -71,6 +88,7 @@ export default function InformacionVivienda() {
           required={true}
           type="number"
           min={0}
+          value={codigoPostal}
         />
         <FloatingLabelInput
           label="Número de portal"

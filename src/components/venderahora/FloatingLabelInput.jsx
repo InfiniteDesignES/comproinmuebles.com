@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 
-export default function FloatingLabelInput({ label, id, register, required, type = 'text', min }) {
+export default function FloatingLabelInput({ label, id, register, required, type = 'text', min, value }) {
   const [isFocused, setIsFocused] = useState(false);
 
   const onFocus = () => setIsFocused(true);
   const onBlur = (e) => setIsFocused(e.target.value !== '');
+
+  // Determina si el label debe estar arriba en función del enfoque o del valor
+  const shouldLabelMove = isFocused || (value && value !== '');
 
   return (
     <div className="relative mt-2">
@@ -18,11 +21,12 @@ export default function FloatingLabelInput({ label, id, register, required, type
         onBlur={onBlur}
         min={min}
         autoComplete="off"
+        value={value}
       />
       <label
         htmlFor={id}
         className={`absolute left-2 top-1/2 transform -translate-y-1/2 text-[11px] text-[var(--color-texto-secundario)] transition-all duration-300 ease-in-out pointer-events-none ${
-          isFocused ? 'scale-75 -translate-y-10 -translate-x-3  ' : ''
+          shouldLabelMove ? 'scale-75 -translate-y-10 -translate-x-3' : ''
         }`}
       >
         {label} {required && <span className="text-[var(--color-rojo)]">*</span>}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
-const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords }) => {
+const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, onSelectCP }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const onFocus = () => setIsFocused(true);
@@ -17,14 +17,14 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords }
   const handleSearch = async (event) => {
     const query = event.target.value;
 
-    if (query.length > 2) {
+    if (query.length > 3) {
       try {
         const response = await axios.get(`https://api.tomtom.com/search/2/search/${query}.json`, {
           params: {
             key: apiKey,
             limit: 5, // Número de sugerencias que quieres mostrar
             language: 'es-ES', // Idioma de las sugerencias
-            countrySet: 'ES' // Limita las sugerencias a un país
+            countrySet: 'ES', // Limita las sugerencias a un país
           }
         });
 
@@ -34,7 +34,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords }
           setSuggestions([]); // Limpia las sugerencias si no hay resultados
         }
       } catch (error) {
-        console.error('Error al obtener sugerencias de TomTom:', error);
+        console.error('Error al obtener sugerencias:', error);
         setSuggestions([]); // Limpia las sugerencias en caso de error
       }
     } else {
@@ -77,7 +77,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords }
         }}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
-        autoComplete='off'
+        autoComplete="off"
       />
       <label
         htmlFor={id}
@@ -98,6 +98,9 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords }
                   e.preventDefault();
                   onSelect(suggestion.address.freeformAddress);
                   onSelectCoords({ lat: suggestion.position.lat, lng: suggestion.position.lon });
+                  if (suggestion.address.postalCode) {
+                    onSelectCP(suggestion.address.postalCode);
+                  }
                   setIsSuggestionsVisible(false); // Cierra las sugerencias al seleccionar
                 }}
               >
