@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
-const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, onSelectCP }) => {
+const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, onSelectCP, onSelectSN }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const onFocus = () => setIsFocused(true);
@@ -100,6 +100,10 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
                   onSelectCoords({ lat: suggestion.position.lat, lng: suggestion.position.lon });
                   if (suggestion.address.postalCode) {
                     onSelectCP(suggestion.address.postalCode);
+                  }
+
+                  if (suggestion.address.streetNumber) {
+                    onSelectSN(suggestion.address.streetNumber);
                   }
                   setIsSuggestionsVisible(false); // Cierra las sugerencias al seleccionar
                 }}

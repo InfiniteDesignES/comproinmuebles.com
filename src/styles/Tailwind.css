@@ -30,4 +30,18 @@
   .gradiente {
     background-image: linear-gradient(135deg, #2CD9FF 0%, #009FD4 100%);
   }
+
+  .hoverImagenFormulario:hover + .hoverDivisorFormulario {
+    background-color: #009FD4;
+    transition: all 0.3s;
+  }
+
+  .divImagenFormulario:hover{
+    scale: 0.5;
+    transition: all 0.3s;
+  }
+
+  .hoverDivisorFormulario{
+    transition: all 0.3s;
+  }
 }

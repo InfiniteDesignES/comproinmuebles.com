@@ -8,7 +8,7 @@ import TomTomAutoComplete from './TomTomAutoComplete';
 
 const mapsApi = 'AIzaSyDH6pOimF4MMMzfqde8JsXxKdXLvD1HLvE';
 
-export default function InformacionVivienda() {
+export default function InformacionVivienda({ setSiguiente }) {
   const mapContainerStyle = {
     width: '100%',
     minHeight: '200px',
@@ -34,9 +34,11 @@ export default function InformacionVivienda() {
   });
 
   const codigoPostal = watch('codigo_postal');
+  const numeroCalle = watch('numero_calle');
 
   const onsubmit = (data) => {
     console.log(data);
+    setSiguiente(1);
   };
 
   const handleSelectAddress = useCallback(
@@ -49,6 +51,13 @@ export default function InformacionVivienda() {
   const handleSelectAddressCP = useCallback(
     (cpValue) => {
       setValue('codigo_postal', cpValue); // Asegúrate de que cpValue contenga el código postal
+    },
+    [setValue]
+  );
+
+  const handleSelectAddressSN = useCallback(
+    (snValue) => {
+      setValue('numero_calle', snValue); // Asegúrate de que snValue contenga el numero de la direccion
     },
     [setValue]
   );
@@ -78,6 +87,7 @@ export default function InformacionVivienda() {
         onSelect={handleSelectAddress}
         onSelectCoords={handleSelectAddressCoords}
         onSelectCP={handleSelectAddressCP}
+        onSelectSN={handleSelectAddressSN}
       />
 
       <div className="w-full flex flex-col md:grid md:grid-cols-6 gap-2">
@@ -97,6 +107,7 @@ export default function InformacionVivienda() {
           required={true}
           type="number"
           min={0}
+          value={numeroCalle}
         />
         <FloatingLabelInput label="Bloque" id="bloque" register={register} />
         <FloatingLabelInput label="Escalera" id="escalera" register={register} type="number" min={0} />
