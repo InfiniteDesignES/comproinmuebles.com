@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function TipoVivienda() {
   const [hovers, setHovers] = useState([false, false]);
@@ -53,7 +53,6 @@ export default function TipoVivienda() {
               alt="Icono piso"
               className="max-w-[168px] h-[168px] object-contain cursor-pointer hoverImagenFormulario"
             />
-            
           </div>
 
           <div

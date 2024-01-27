@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <footer className="h-[21rem] bg-600 text-03">
       <div className="flex justify-between items-end p-20 min-h-full">
-        <div className='flex justify-between items-center w-full'>
+        <div className="flex justify-between items-center w-full">
           <div className="flex flex-col gap-4">
             <div className="flex items-center">
               <span className="text-xl font-bold">Logo</span>

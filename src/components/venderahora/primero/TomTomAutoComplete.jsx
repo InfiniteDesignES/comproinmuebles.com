@@ -1,12 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, onSelectCP, onSelectSN }) => {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const onFocus = () => setIsFocused(true);
-  const onBlur = (e) => setIsFocused(e.target.value !== '');
-
   const [isSuggestionsVisible, setIsSuggestionsVisible] = useState(false);
   const autocompleteRef = useRef(null); // Ref para el contenedor del autocompletado
 
@@ -24,7 +20,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
             key: apiKey,
             limit: 5, // Número de sugerencias que quieres mostrar
             language: 'es-ES', // Idioma de las sugerencias
-            countrySet: 'ES', // Limita las sugerencias a un país
+            countrySet: 'ES' // Limita las sugerencias a un país
           }
         });
 

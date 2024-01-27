@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { LoadScript, GoogleMap } from '@react-google-maps/api';
 
@@ -29,7 +30,8 @@ export default function InformacionVivienda({ setSiguiente }) {
     formState: { errors }
   } = useForm({
     defaultValues: {
-      codigo_postal: '' // Establece un valor inicial vacío o adecuado
+      codigo_postal: '', // Establece un valor inicial vacío o adecuado
+      numero_calle: ''
     }
   });
 

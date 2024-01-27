@@ -1,5 +1,4 @@
-
-import VenderAhora from "../botones/VenderAhora";
+import VenderAhora from '../botones/VenderAhora';
 
 export default function Titulo() {
   return (
@@ -10,9 +9,7 @@ export default function Titulo() {
           <br />
           Inmuebles
         </h1>
-        <h2 className="mt-6 font-medium text-2xl">
-          Vende tu Casa Rápidamente y Sin Complicaciones.
-        </h2>
+        <h2 className="mt-6 font-medium text-2xl">Vende tu Casa Rápidamente y Sin Complicaciones.</h2>
         <VenderAhora />
       </div>
     </main>
