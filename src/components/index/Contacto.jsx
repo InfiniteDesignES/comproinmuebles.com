@@ -1,3 +1,1 @@
-export default function Contacto() {
-
-}
+export default function Contacto() {}

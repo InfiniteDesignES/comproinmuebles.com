@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Header from '../layout/Header';
 import InformacionVivienda from '../components/venderahora/primero/InformacionVivienda';
 import TipoVivienda from '../components/venderahora/segundo/TipoVivienda';

@@ -6,6 +6,7 @@ export default {
       0: '#1b1b1b',
       '01': '#717D96',
       '02': '#CBD2E0',
+      '03': '#FEFEFE',
       50: '#EFFBFF',
       100: '#DEF6FF',
       200: '#B6EFFF',
