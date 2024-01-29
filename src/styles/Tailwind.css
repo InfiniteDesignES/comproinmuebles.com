@@ -25,3 +25,13 @@
     -moz-appearance: textfield !important;
   }
 }
+
+@layer components {
+  .gradiente {
+    background-image: linear-gradient(
+      135deg,
+      #2cd9ff 0%,
+      #009fd4 100%
+    );
+  }
+}

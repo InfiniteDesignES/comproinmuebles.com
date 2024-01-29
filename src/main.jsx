@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client'
 import Index from './pages/Index.jsx'
 import InformacionVivienda from './components/InformacionVivienda.jsx'
 import TipoVivienda from './components/TipoVivienda.jsx'
+import RelacionExterior from './components/RelacionExterior.jsx'
+import EspaciosPrincipalesBoton from './components/EspaciosPrincipalesBoton.jsx'
 
 import './styles/Tailwind.css'
 import './styles/Main.css'
@@ -12,7 +14,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import RelacionExterior from './components/RelacionExterior.jsx'
+import EspaciosPrincipales from './components/EspaciosPrincipales.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sell",
-    element: <RelacionExterior />,
+    element: <EspaciosPrincipales />,
   }
 
 ]);
