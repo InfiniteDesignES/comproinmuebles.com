@@ -13,7 +13,11 @@ export default {
       "700": "#007FAB",
       "800": "#006B8D",
       "900": "#065874",
-      "950": "04384D"
+      "950": "04384D",
+      "gris-claro":"717D96",
+      "negro":"000000",
+      "blanco":"FFFFFF"
+
     },
     extend: {
       fontFamily: {

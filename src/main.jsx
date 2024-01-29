@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import Index from './pages/Index.jsx'
+import Contact   from './pages/Contact.jsx'
+import InfoLegal from './pages/InfoLegal.jsx'
 
 import './styles/Tailwind.css'
 import './styles/Main.css'
@@ -14,7 +16,15 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index />,
+    element: <Index/>,
+  },
+  {
+    path: "/contact",
+    element: <Contact/>,
+  },
+  {
+    path: "/legal-info",
+    element: <InfoLegal/>,
   }
 ]);
 
