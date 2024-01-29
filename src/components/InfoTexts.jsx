@@ -5,9 +5,9 @@ export default function InfoTexts   ({n}) {
     }
      if (n === 1) {
         return(
-            <div className="flex flex-col items-start mt-10 ml-20">
-                <h3 className="mb-10 text-600">Política de Privacidad - Compro Inmueble</h3>
-                <p className="w-3/6 leading-relaxed text-negro">
+            <div className="flex flex-col items-start w-full mt-10 ">
+                <h3 className="mb-10 ml-5 text-600" >Política de Privacidad </h3>
+                <p className="w-screen p-16 leading-9 text-negro">
                     Información que Recopilamos:
                     En Compro Inmueble, recopilamos información personal limitada y relevante para proporcionar nuestros servicios. Esto puede incluir nombres, direcciones, información de contacto y detalles de propiedades.
 
@@ -31,8 +31,8 @@ export default function InfoTexts   ({n}) {
     }else if (n === 2) {
         return(
             <div className="flex flex-col items-start mt-10 ml-20">
-                <h3 className="mb-10 text-600">Términos y Condiciones - Compro Inmueble</h3>
-                <p className="w-3/6 leading-relaxed text-negro">
+                <h3 className="mb-10 text-600">Términos y Condiciones </h3>
+                <p className="w-screen p-16 leading-9 text-negro">
                     Aceptación de Términos:
                     Al acceder y utilizar los servicios de Compro Inmueble, el usuario acepta estos Términos y Condiciones en su totalidad. Si no está de acuerdo con algún término, no utilice nuestros servicios.
 
@@ -60,7 +60,7 @@ export default function InfoTexts   ({n}) {
         return(
             <div className="flex flex-col items-start mt-10 ml-20">
                 <h3 className="mb-10 text-600 ">Política de Cookies </h3>
-                <p className="w-3/6 leading-relaxed text-negro">
+                <p className="w-screen p-16 leading-9 text-negro">
                     
                     Te informamos que, en cumplimiento de la normativa vigente en materia de protección de datos, el sitio web de Compro Inmueble utiliza cookies propias y de terceros.
 
