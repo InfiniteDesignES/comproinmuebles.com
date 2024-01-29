@@ -1,4 +1,4 @@
-const EspaciosComunes = () => {
+export default function EspaciosComunes() {
     return (
         <div className="relacionExterior max-w-[1120px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col">
             <h3 className="text-2xl font-semibold">Relación con el exterior</h3>
@@ -31,5 +31,3 @@ const EspaciosComunes = () => {
         </div>
     )
 }
-
-export default EspaciosComunes;

@@ -1,6 +1,6 @@
 import EspaciosPrincipalesBoton from "./EspaciosPrincipalesBoton";
 
-const EspaciosPrincipales = () => {
+export default function EspaciosPrincipales() {
     return (
         <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col">
             <h3 className="text-2xl font-semibold">Relación con el exterior</h3>
@@ -30,5 +30,3 @@ const EspaciosPrincipales = () => {
         </div>
     )
 }
-
-export default EspaciosPrincipales;

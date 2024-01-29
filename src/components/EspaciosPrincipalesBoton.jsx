@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 
-const EspaciosPrincipalesBoton = () => {
+
+export default function EspaciosPrincipalesBoton() {
     const [cantidad, setCantidad] = useState(0);
 
     return (
@@ -12,5 +13,3 @@ const EspaciosPrincipalesBoton = () => {
         </div>
     )
 }
-
-export default EspaciosPrincipalesBoton;
