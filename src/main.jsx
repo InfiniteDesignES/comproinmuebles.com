@@ -15,6 +15,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import EspaciosPrincipales from './components/EspaciosPrincipales.jsx'
+import EspaciosComunes from './components/EspaciosComunes.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sell",
-    element: <EspaciosPrincipales />,
+    element: <EspaciosComunes />,
   }
 
 ]);
