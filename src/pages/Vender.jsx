@@ -23,7 +23,7 @@ export default function Vender() {
   };
 
   return (
-    <main className="flex justify-center items-center h-screen bg-[url('images/Background2.svg')] bg-cover">
+    <main className="flex h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover">
       <Header />
       {renderComponent()}
     </main>
