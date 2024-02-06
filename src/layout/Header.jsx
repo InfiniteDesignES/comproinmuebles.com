@@ -7,7 +7,7 @@ export default function Header() {
       <nav className="flex gap-8 font-medium">
         <Link to="">Vender ahora</Link>
         <Link to="">Valora tu vivienda</Link>
-        <Link to="">Contacto</Link>
+        <Link to="Contact">Contacto</Link>
       </nav>
     </header>
   );
