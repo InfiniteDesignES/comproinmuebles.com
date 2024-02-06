@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function TipoVivienda() {
+export default function TipoVivienda({ onSubmit }) {
   const [hovers, setHovers] = useState([false, false]);
   const [selected, setSelected] = useState(null);
 
@@ -35,16 +35,15 @@ export default function TipoVivienda() {
           </div>
 
           <div
-            className={`w-6/12 h-[3px] bg-[var(--color-borde)] my-4 rounded-md hoverDivisorFormulario ${
-              hovers[0] ? 'divDisivorFormulario' : ''
-            }`}
+            className={`w-6/12 h-[3px] bg-[var(--color-borde)] my-4 rounded-md hoverDivisorFormulario ${hovers[0] ? 'divDisivorFormulario' : ''
+              }`}
           ></div>
           {/* <p className="text-3xl font-medium text-[var(--azul-secundario)]">Piso</p> */}
         </div>
         <div className="flex flex-col w-full items-center justify-center">
           <div
             className={`divImagenFormulario ${selected !== 1 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => handleClick(1)}
+            onClick={() => { handleClick(1); onSubmit(3) }}
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave(1)}
           >
@@ -56,9 +55,8 @@ export default function TipoVivienda() {
           </div>
 
           <div
-            className={`w-6/12 h-[3px] bg-[var(--color-borde)] my-4 rounded-md hoverDivisorFormulario ${
-              hovers[1] ? 'divDisivorFormulario' : ''
-            }`}
+            className={`w-6/12 h-[3px] bg-[var(--color-borde)] my-4 rounded-md hoverDivisorFormulario ${hovers[1] ? 'divDisivorFormulario' : ''
+              }`}
           ></div>
           {/* <p className="text-3xl font-medium text-[var(--azul-secundario)]">Piso</p> */}
         </div>
