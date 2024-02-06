@@ -1,0 +1,39 @@
+@import './Main.css';
+
+.SliderRoot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  padding-inline: 12px;
+  height: 20px;
+  max-width: 500px;
+}
+
+.SliderTrack {
+  background-color: var(--azul-secundario);
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  height: 3px;
+}
+
+.SliderRange {
+  position: absolute;
+  border-radius: 9999px;
+  height: 100%;
+}
+
+.SliderThumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px var(--black-a7);
+  border-radius: 10px;
+  border: 1px solid rgb(130, 130, 130);
+}
+.SliderThumb:focus {
+  outline: none;
+}

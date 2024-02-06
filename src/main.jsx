@@ -18,6 +18,8 @@ import EspaciosPrincipales from './components/EspaciosPrincipales.jsx'
 import EspaciosComunes from './components/EspaciosComunes.jsx'
 import EstadoVivienda from './components/EstadoVivienda.jsx'
 import PorqueVender from './components/PorqueVender.jsx'
+import EnviarContacto from './components/EnviarContacto.jsx'
+import MetrosCuadrados from './components/MetrosCuadrados.jsx'
 
 
 const router = createBrowserRouter([
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sell",
-    element: <PorqueVender />,
+    element: <MetrosCuadrados />,
   }
 
 ]);
