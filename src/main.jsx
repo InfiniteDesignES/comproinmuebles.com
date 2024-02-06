@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 
 
 import Index from './pages/Index.jsx'
-import Contact   from './pages/Contact.jsx'
+import Contact from './pages/Contact.jsx'
 import InfoLegal from './pages/InfoLegal.jsx'
 import Vender from './pages/Vender.jsx'
+import MetrosCuadrados from './components/venderahora/cuarto/MetrosCuadrados.jsx'
 
 
 
@@ -23,17 +24,17 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index/>,
+    element: <MetrosCuadrados />,
   },
   {
     path: "/contact",
-    element: <Contact/>,
+    element: <Contact />,
   },
   {
     path: "/legal-info",
-    element: <InfoLegal/>,
+    element: <InfoLegal />,
   },
-    {
+  {
     path: '/vender',
     element: <Vender />
   },
