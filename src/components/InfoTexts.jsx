@@ -5,7 +5,7 @@ export default function InfoTexts   ({n}) {
     }
      if (n === 1) {
         return(
-            <div className="flex flex-col mt-10 ">
+            <div className="flex flex-col mt-10 w-100">
                 <h3 className="mb-10 ml-6 text-600" >Política de Privacidad </h3>
                 <p className="leading-9 w-100 p-14 text-negro">
                     <strong>Información que Recopilamos:</strong><br />
@@ -31,7 +31,7 @@ export default function InfoTexts   ({n}) {
         )
     }else if (n === 2) {
         return(
-            <div className="flex flex-col mt-10 ">
+            <div className="flex flex-col mt-10 w-100 ">
                 <h3 className="mb-10 ml-6 text-600">Términos y Condiciones </h3>
                 <p className="leading-9 w-100 p-14 text-negro">
                     <strong>Aceptación de Términos:</strong><br />
@@ -59,7 +59,7 @@ export default function InfoTexts   ({n}) {
         )
     }else  if (n === 3 ) {
         return(
-            <div className="flex flex-col mt-10 ">
+            <div className="flex flex-col mt-10 w-100">
                 <h3 className="mb-10 ml-6 text-600">Política de Cookies </h3>
                 <p className="p-16 leading-9 w-100 text-negro">
                     
