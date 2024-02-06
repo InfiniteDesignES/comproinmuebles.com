@@ -7,6 +7,7 @@ body {
   letter-spacing: -0.2px;
 }
 
+
 header{
   color: #fefefe;
 }
@@ -22,4 +23,10 @@ header{
 
 .header-text {
   text-align: right;
+}
+
+input {
+  border: 2px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
 }
