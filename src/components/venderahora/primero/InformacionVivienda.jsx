@@ -9,7 +9,7 @@ import TomTomAutoComplete from './TomTomAutoComplete';
 
 const mapsApi = 'AIzaSyDH6pOimF4MMMzfqde8JsXxKdXLvD1HLvE';
 
-export default function InformacionVivienda({ setSiguiente }) {
+export default function InformacionVivienda({ onSubmit }) {
   const mapContainerStyle = {
     width: '100%',
     minHeight: '200px',
@@ -38,9 +38,9 @@ export default function InformacionVivienda({ setSiguiente }) {
   const codigoPostal = watch('codigo_postal');
   const numeroCalle = watch('numero_calle');
 
-  const onsubmit = (data) => {
+  const onFormSubmit = (data) => {
     console.log(data);
-    setSiguiente(1);
+    onSubmit(data);
   };
 
   const handleSelectAddress = useCallback(
@@ -76,8 +76,8 @@ export default function InformacionVivienda({ setSiguiente }) {
 
   return (
     <form
-      onSubmit={handleSubmit(onsubmit)}
-      className="max-w-[800px] min-h-[550px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4 bg-[var(--blanco)] gap-4"
+      onSubmit={handleSubmit(onFormSubmit)}
+      className="flex min-h-[550px] max-w-[800px] flex-col gap-4 rounded-lg border border-[var(--color-borde)] bg-[var(--blanco)] px-8 py-4"
     >
       <span className="text-2xl font-bold">Información de la vivienda</span>
 
@@ -92,7 +92,7 @@ export default function InformacionVivienda({ setSiguiente }) {
         onSelectSN={handleSelectAddressSN}
       />
 
-      <div className="w-full flex flex-col md:grid md:grid-cols-6 gap-2">
+      <div className="flex w-full flex-col gap-2 md:grid md:grid-cols-6">
         <FloatingLabelInput
           label="Código postal"
           id="codigo_postal"
@@ -104,7 +104,7 @@ export default function InformacionVivienda({ setSiguiente }) {
         />
         <FloatingLabelInput
           label="Número de portal"
-          id="numero_portal"
+          id="numero_calle"
           register={register}
           required={true}
           type="number"
@@ -117,12 +117,12 @@ export default function InformacionVivienda({ setSiguiente }) {
         <FloatingLabelInput label="Puerta" id="puerta" register={register} required={true} type="number" min={0} />
       </div>
 
-      {(errors.direccion || errors.codigo_postal || errors.numero_portal || errors.puerta) && (
-        <span className="text-[var(--color-rojo)] text-sm mt-4">Por favor completa todos los campos</span>
+      {(errors.direccion || errors.codigo_postal || errors.numero_calle || errors.puerta) && (
+        <span className="mt-4 text-sm text-[var(--color-rojo)]">Por favor completa todos los campos</span>
       )}
 
-      <div className="w-full h-[1px] bg-[var(--color-borde)] my-4"></div>
-      <div className="w-full min-h-[200px] rounded-md border border-[var(--color-borde)]">
+      <div className="my-4 h-[1px] w-full bg-[var(--color-borde)]"></div>
+      <div className="min-h-[200px] w-full rounded-md border border-[var(--color-borde)]">
         <LoadScript googleMapsApiKey={mapsApi}>
           <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={18}>
             {/* Aquí puedes añadir marcadores o rutas si es necesario */}
@@ -132,7 +132,7 @@ export default function InformacionVivienda({ setSiguiente }) {
 
       <button
         type="submit"
-        className="w-full h-9 rounded-md mt-4 text-[var(--blanco)] bg-gradient-to-r from-400 via-600 to-800 bg-pos-0 hover:bg-pos-50 active:bg-pos-100 bg-size-200 transition-all duration-150"
+        className="mt-4 h-9 w-full rounded-md bg-gradient-to-r from-400 via-600 to-800 bg-size-200 bg-pos-0 text-[var(--blanco)] transition-all duration-150 hover:bg-pos-50 active:bg-pos-100"
       >
         Continuar
       </button>
