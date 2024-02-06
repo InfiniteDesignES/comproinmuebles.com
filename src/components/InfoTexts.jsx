@@ -5,68 +5,69 @@ export default function InfoTexts   ({n}) {
     }
      if (n === 1) {
         return(
-            <div className="flex flex-col items-start w-full mt-10 ">
-                <h3 className="mb-10 ml-5 text-600" >Política de Privacidad </h3>
-                <p className="w-screen p-16 leading-9 text-negro">
-                    Información que Recopilamos:
+            <div className="flex flex-col w-full mt-10 ">
+                <h3 className="mb-10 ml-6 text-600" >Política de Privacidad </h3>
+                <p className="w-full leading-9 p-14 text-negro">
+                    <strong>Información que Recopilamos:</strong><br />
                     En Compro Inmueble, recopilamos información personal limitada y relevante para proporcionar nuestros servicios. Esto puede incluir nombres, direcciones, información de contacto y detalles de propiedades.
-
-                    Uso de la Información:
+                    <br />
+                    <strong>Uso de la Información:</strong>
+                    <br />
                     La información recopilada se utiliza para facilitar la compra y venta de inmuebles, mejorar nuestros servicios, y mantener una comunicación efectiva con nuestros usuarios. No compartimos información con terceros sin el consentimiento del usuario, excepto cuando sea necesario para cumplir con la ley.
-
-                    Seguridad de la Información:
+                    <br />
+                    <strong>Seguridad de la Información:</strong><br />
                     Implementamos medidas de seguridad para proteger la información recopilada. Sin embargo, no podemos garantizar la seguridad absoluta, y los usuarios comparten su información bajo su propia responsabilidad.
-
-                    Cookies y Tecnologías Similares:
+                    <br />
+                    <strong>Cookies y Tecnologías Similares:</strong><br />
                     Consulte nuestra Política de Cookies para obtener información detallada sobre el uso de cookies y cómo gestionar las preferencias del usuario.
-
-                    Derechos del Usuario:
+                    <br />
+                    <strong>Derechos del Usuario:</strong><br />
                     Los usuarios tienen derecho a acceder, corregir, actualizar o eliminar su información personal. Pueden ejercer estos derechos poniéndose en contacto con nosotros a través de correo@comproinmueble.com.
-
-                    Cambios en la Política de Privacidad:
+                    <br />
+                    <strong>Información que Recopilamos:</strong><br />
                     La Política de Privacidad puede ser modificada para cumplir con cambios legislativos o mejorar nuestros servicios. Los usuarios serán notificados de cualquier cambio significativo.
                 </p>
             </div>
         )
     }else if (n === 2) {
         return(
-            <div className="flex flex-col items-start mt-10 ml-20">
-                <h3 className="mb-10 text-600">Términos y Condiciones </h3>
-                <p className="w-screen p-16 leading-9 text-negro">
-                    Aceptación de Términos:
+            <div className="flex flex-col mt-10 ">
+                <h3 className="mb-10 ml-6 text-600">Términos y Condiciones </h3>
+                <p className="w-full leading-9 p-14 text-negro">
+                    <strong>Aceptación de Términos:</strong><br />
                     Al acceder y utilizar los servicios de Compro Inmueble, el usuario acepta estos Términos y Condiciones en su totalidad. Si no está de acuerdo con algún término, no utilice nuestros servicios.
-
-                    Servicios Ofrecidos:
+                    <br />
+                    <strong>Servicios Ofrecidos:</strong><br />
                     Compro Inmueble facilita la compra y venta de propiedades. No somos responsables por la exactitud de la información proporcionada por los usuarios y recomendamos verificar los detalles de las propiedades directamente.
-
-                    Responsabilidades del Usuario:
+                    <br />
+                    <strong>Responsabilidades del Usuario: </strong><br />
                     Los usuarios son responsables de la exactitud de la información proporcionada. Compro Inmueble se reserva el derecho de suspender o cancelar cuentas que violen los términos o involucren prácticas fraudulentas.
-
-                    Propiedad Intelectual:
+                    <br />
+                    <strong>Propiedad Intelectual:</strong><br />
                     Los derechos de propiedad intelectual de los contenidos en el sitio web son propiedad de Compro Inmueble. No se permite la reproducción sin permiso.
-
-                    Limitación de Responsabilidad:
+                    <br />
+                    <strong>Limitación de Responsabilidad:</strong><br />
                     Compro Inmueble no será responsable por daños directos o indirectos resultantes del uso de nuestros servicios.
-
-                    Ley Aplicable y Jurisdicción:
+                    <br />
+                    <strong>Ley Aplicable y Jurisdicción:</strong><br />
                     Estos Términos y Condiciones se rigen por las leyes de España .
-
-                    Contacto:
+                    <br />
+                    <strong>Contacto:</strong><br />
                     Para cualquier pregunta o aclaración sobre estos Términos y Condiciones, contacte con nosotros a través de correo@comproinmueble.com.
                 </p>
             </div>
         )
     }else  if (n === 3 ) {
         return(
-            <div className="flex flex-col items-start mt-10 ml-20">
-                <h3 className="mb-10 text-600 ">Política de Cookies </h3>
-                <p className="w-screen p-16 leading-9 text-negro">
+            <div className="flex flex-col mt-10 ">
+                <h3 className="mb-10 ml-6 text-600">Política de Cookies </h3>
+                <p className="w-full p-16 leading-9 text-negro">
                     
                     Te informamos que, en cumplimiento de la normativa vigente en materia de protección de datos, el sitio web de Compro Inmueble utiliza cookies propias y de terceros.
-
+                    <br />
                     ¿Qué son las cookies?
                     Una cookie es un fichero que se descarga en el dispositivo del usuario al acceder al sitio web, con la finalidad de almacenar y recuperar información sobre la navegación realizada en el dispositivo.
-
+                    <br />
                     Tipos de cookies:
                     Según la entidad que las gestione:
                     Cookies propias: Enviadas al equipo terminal del usuario desde un dominio gestionado por Compro Inmueble.

@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Footertemporal from './components/Footertemporal.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/legal-info",
     element: <InfoLegal/>,
+  },
+  {
+    path: "/temporal",
+    element: <Footertemporal/>,
   }
 ]);
 
