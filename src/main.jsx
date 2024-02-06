@@ -6,6 +6,8 @@ import InformacionVivienda from './components/InformacionVivienda.jsx'
 import TipoVivienda from './components/TipoVivienda.jsx'
 import RelacionExterior from './components/RelacionExterior.jsx'
 import EspaciosPrincipalesBoton from './components/EspaciosPrincipalesBoton.jsx'
+import Vender from './pages/Vender.jsx'
+import TipoVivienda from './components/venderahora/segundo/TipoVivienda.jsx'
 
 import './styles/Tailwind.css'
 import './styles/Main.css'
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
+  },
+  {
+    path: "/vender",
+    element: <Vender />,
   },
   {
     path: "/sell",
