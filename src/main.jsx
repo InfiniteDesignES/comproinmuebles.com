@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-
 import Index from './pages/Index.jsx'
 import Contact from './pages/Contact.jsx'
 import InfoLegal from './pages/InfoLegal.jsx'
 import Vender from './pages/Vender.jsx'
 import MetrosCuadrados from './components/venderahora/cuarto/MetrosCuadrados.jsx'
-
-
-
 
 import './styles/Tailwind.css';
 import './styles/Main.css';
@@ -24,7 +20,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MetrosCuadrados />,
+    element: <Index />,
+  },
+  {
+    path: '/vender',
+    element: <Vender />
   },
   {
     path: "/contact",
@@ -33,10 +33,6 @@ const router = createBrowserRouter([
   {
     path: "/legal-info",
     element: <InfoLegal />,
-  },
-  {
-    path: '/vender',
-    element: <Vender />
   },
 ]);
 

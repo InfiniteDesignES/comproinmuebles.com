@@ -5,9 +5,9 @@ export default function InfoTexts   ({n}) {
     }
      if (n === 1) {
         return(
-            <div className="flex flex-col w-full mt-10 ">
+            <div className="flex flex-col mt-10 w-100">
                 <h3 className="mb-10 ml-6 text-600" >Política de Privacidad </h3>
-                <p className="w-full leading-9 p-14 text-negro">
+                <p className="leading-9 w-100 p-14 text-negro">
                     <strong>Información que Recopilamos:</strong><br />
                     En Compro Inmueble, recopilamos información personal limitada y relevante para proporcionar nuestros servicios. Esto puede incluir nombres, direcciones, información de contacto y detalles de propiedades.
                     <br />
@@ -31,9 +31,9 @@ export default function InfoTexts   ({n}) {
         )
     }else if (n === 2) {
         return(
-            <div className="flex flex-col mt-10 ">
+            <div className="flex flex-col mt-10 w-100 ">
                 <h3 className="mb-10 ml-6 text-600">Términos y Condiciones </h3>
-                <p className="w-full leading-9 p-14 text-negro">
+                <p className="leading-9 w-100 p-14 text-negro">
                     <strong>Aceptación de Términos:</strong><br />
                     Al acceder y utilizar los servicios de Compro Inmueble, el usuario acepta estos Términos y Condiciones en su totalidad. Si no está de acuerdo con algún término, no utilice nuestros servicios.
                     <br />
@@ -59,16 +59,16 @@ export default function InfoTexts   ({n}) {
         )
     }else  if (n === 3 ) {
         return(
-            <div className="flex flex-col mt-10 ">
+            <div className="flex flex-col mt-10 w-100">
                 <h3 className="mb-10 ml-6 text-600">Política de Cookies </h3>
-                <p className="w-full p-16 leading-9 text-negro">
+                <p className="p-16 leading-9 w-100 text-negro">
                     
                     Te informamos que, en cumplimiento de la normativa vigente en materia de protección de datos, el sitio web de Compro Inmueble utiliza cookies propias y de terceros.
                     <br />
-                    ¿Qué son las cookies?
+                    <strong>¿Qué son las cookies? </strong>
                     Una cookie es un fichero que se descarga en el dispositivo del usuario al acceder al sitio web, con la finalidad de almacenar y recuperar información sobre la navegación realizada en el dispositivo.
                     <br />
-                    Tipos de cookies:
+                     <strong>Tipos de cookies:</strong>
                     Según la entidad que las gestione:
                     Cookies propias: Enviadas al equipo terminal del usuario desde un dominio gestionado por Compro Inmueble.
                     Cookies de terceros: Enviadas desde un dominio no gestionado por Compro Inmueble.
@@ -86,14 +86,14 @@ export default function InfoTexts   ({n}) {
                     Gestionan eficazmente los espacios publicitarios y ofrecen anuncios relevantes.
                     Consentimiento del usuario:
                     La base jurídica que legitima estos tratamientos es el consentimiento del usuario, prestado a través de las opciones de configuración de cookies. El usuario puede rechazar el uso de cookies mediante los mecanismos indicados a continuación.
-
-                    Configuración de cookies:
+                    <br />
+                    <strong>Configuración de cookies:</strong>
                     El usuario puede revisar y cambiar su configuración de cookies a través del Panel de configuración o ajustar las opciones del navegador instalado en su dispositivo. Consulta la sección de ayuda de tu navegador para obtener información específica sobre cómo gestionar cookies.
-
-                    Actualizaciones y cambios en la Política de Cookies:
+                    <br />
+                    <strong>Actualizaciones y cambios en la Política de Cookies:</strong>
                     La variación de las cookies en este sitio web puede estar relacionada con la gestión y el mantenimiento del mismo. Se realizan revisiones periódicas para adecuar la política de cookies.
-
-                    Derechos de los usuarios en protección de datos:
+                    <br />
+                    <strong>Derechos de los usuarios en protección de datos:</strong>
                     Para obtener más información sobre el tratamiento de datos personales y ejercitar tus derechos, visita nuestra Política de Privacidad o ponte en contacto con nosotros a través de nuestro correo electrónico: correo@comproinmueble.com.
                 </p>
             </div>
