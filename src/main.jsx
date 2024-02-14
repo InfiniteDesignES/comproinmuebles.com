@@ -5,6 +5,7 @@ import Index from './pages/Index.jsx'
 import Contact from './pages/Contact.jsx'
 import InfoLegal from './pages/InfoLegal.jsx'
 import Vender from './pages/Vender.jsx'
+import MetrosCuadrados from './components/venderahora/cuarto/MetrosCuadrados.jsx'
 
 import './styles/Tailwind.css';
 import './styles/Main.css';
