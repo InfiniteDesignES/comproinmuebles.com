@@ -3,8 +3,9 @@ import  Mail  from "../components/Mail"
 
 export default function Contact(){
     return(
-        <main className="fixed flex flex-col h-fit top-40 left-16">
-            <Header/>   
+        <main className="flex flex-col w-100">
+            <Header/>  
+            <br /> 
             <Mail/>
            
             {/* <div><h1>Nuestro Telefono:</h1> <a href="tel:+"></a></div> */}
