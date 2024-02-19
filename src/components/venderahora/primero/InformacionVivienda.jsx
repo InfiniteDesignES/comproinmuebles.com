@@ -9,7 +9,7 @@ import TomTomAutoComplete from './TomTomAutoComplete';
 
 const mapsApi = 'AIzaSyDH6pOimF4MMMzfqde8JsXxKdXLvD1HLvE';
 
-export default function InformacionVivienda({ onSubmit }) {
+export default function InformacionVivienda({ toggleComponent }) {
   const mapContainerStyle = {
     width: '100%',
     minHeight: '200px',
@@ -40,7 +40,7 @@ export default function InformacionVivienda({ onSubmit }) {
 
   const onFormSubmit = (data) => {
     console.log(data);
-    onSubmit(data);
+    toggleComponent(data);
   };
 
   const handleSelectAddress = useCallback(

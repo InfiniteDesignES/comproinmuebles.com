@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function TipoVivienda({ onSubmit }) {
+export default function TipoVivienda({ toggleComponent }) {
   const [hovers, setHovers] = useState([false, false]);
   const [selected, setSelected] = useState(null);
 
@@ -43,7 +43,7 @@ export default function TipoVivienda({ onSubmit }) {
         <div className="flex flex-col w-full items-center justify-center">
           <div
             className={`divImagenFormulario ${selected !== 1 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(1); onSubmit(3) }}
+            onClick={() => { handleClick(1); toggleComponent() }}
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave(1)}
           >
