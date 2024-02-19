@@ -4,7 +4,7 @@ import NumeroDinamico from '../dinamicos/Numero';
 export default function ComoFunciona() {
   return (
     <main className="h-screen flex flex-col justify-center items-center">
-      <h3 className="font-extrabold text-5xl leading-10 text-0">¿Cómo funciona ComproInmuebles?</h3>
+      <h3 className="font-extrabold md:text-5xl text-4xl leading-10 text-0 text-center">¿Cómo funciona ComproInmuebles?</h3>
       <p className="mt-6 font-medium text-2xl text-01">
         Recibe tu presupuesto inicial gratis y sin compromiso en menos de una semana.
       </p>
