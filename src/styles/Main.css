@@ -7,6 +7,11 @@ body {
   letter-spacing: -0.2px;
 }
 
+
+header{
+  color: #fefefe;
+}
+
 :root {
   --blanco: #fefefe;
   --color-borde: #cbd2e0;
