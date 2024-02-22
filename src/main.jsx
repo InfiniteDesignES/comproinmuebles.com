@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import Index from './pages/Index.jsx'
 import Contact from './pages/Contact.jsx'
+import Contacto from './pages/Contacto.jsx'
 import InfoLegal from './pages/InfoLegal.jsx'
 import Vender from './pages/Vender.jsx'
 import MetrosCuadrados from './components/venderahora/cuarto/MetrosCuadrados.jsx'
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/contacto",
+    element: <Contacto />,
   },
   {
     path: "/legal-info",

@@ -92,7 +92,7 @@ export default function InformacionVivienda({ toggleComponent }) {
         onSelectSN={handleSelectAddressSN}
       />
 
-      <div className="flex w-full flex-col gap-2 md:grid md:grid-cols-6">
+      <div className="flex flex-col w-full gap-2 md:grid md:grid-cols-6">
         <FloatingLabelInput
           label="Código postal"
           id="codigo_postal"
