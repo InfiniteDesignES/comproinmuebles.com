@@ -1,15 +1,24 @@
 import { useForm } from "react-hook-form";
 import ToggleButtonsContainer from "./ToggleButtonsContainer";
 
-export default function PorqueVender() {
+export default function PorqueVender({toggleComponent}) {
     const {
         register,
         handleSubmit,
         formState: { errors }
-    } = useForm()
+    } = useForm({
+        defaultValues: {
+            metroscuadrados: 75,
+        }
+    });
+
+    const onFormSubmit = (data) => {
+        console.log(data);
+        toggleComponent(data);
+    };
 
     return (
-        <form onSubmit={handleSubmit(onsubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
             <span className="text-2xl font-bold">Información de la vivienda</span>
             <ToggleButtonsContainer />
             <label htmlFor="direccion" className="text-[11px] mt-2">
