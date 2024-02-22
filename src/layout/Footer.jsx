@@ -8,7 +8,7 @@ export default function Header() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <img width={'80px'} src='/logos/LogoNoBG.png' />
-              <img width={'80px'} src='/logos/LogoNoBG.png' />
+              <img width={'200px'} src='/logos/linkey2.jpg' />
             </div>
             <div className="text-sm">
               <span>&copy;Copyright 2024</span>
