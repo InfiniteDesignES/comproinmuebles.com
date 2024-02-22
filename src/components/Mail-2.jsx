@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import FloatingLabelInput from '../components/venderahora/primero/FloatingLabelInput.jsx';
 
 
-export  default function  Mail  () {
+export  default function  Mail2  () {
     const {
         register,
         handleSubmit,
@@ -11,13 +11,14 @@ export  default function  Mail  () {
 
     return(
         <div className="w-full px-12 mt-20 mb-16 border-t border-t-negro ">
-            <h2  className="mt-12 text-2xl font-bold">Contacto:</h2>
-            <p className="mb-8 text-xs text-01">Si quieres contactar con nosotros hazlo a través del siguiente formulario </p>
+            {/* <h2  className="mt-12 text-2xl font-bold">Contacto:</h2>
+            <p className="mb-8 text-xs text-01">Si quieres contactar con nosotros hazlo a través del siguiente formulario </p> */}
                 <form
                     action = "mailto:contacto@comproinmuebles.com"
-                    className="flex min-h-[550px] max-w-[800px] flex-col gap-4 rounded-lg border border-[var(--color-borde)] bg-[var(--blanco)] px-8 py-4"
+                    className="flex min-h-[550px] max-w-[800px] flex-col gap-4 rounded-lg border border-[var(--color-borde)] bg-[var(--blanco)] px-8 py-4 mt-10"
                     >
-                    
+                    <h2  className="mt-1 text-2xl font-bold">Contacto:</h2>
+                    <p className="mb-8 text-xs text-01">Si quieres contactar con nosotros hazlo a través del siguiente formulario </p>
 
                     <div className="flex flex-col w-full gap-2 md:grid md:grid-cols-3">
                         <FloatingLabelInput
