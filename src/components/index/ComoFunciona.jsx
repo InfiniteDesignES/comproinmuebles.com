@@ -3,12 +3,12 @@ import NumeroDinamico from '../dinamicos/Numero';
 
 export default function ComoFunciona() {
   return (
-    <main className="h-screen flex flex-col justify-center items-center">
+    <main className="min-h-screen flex flex-col justify-center items-center my-10">
       <h3 className="font-extrabold md:text-5xl text-4xl leading-10 text-0 text-center">¿Cómo funciona ComproInmuebles?</h3>
-      <p className="mt-6 font-medium text-2xl text-01">
+      <p className="mt-6 font-medium md:text-2xl text-xl text-center text-01">
         Recibe tu presupuesto inicial gratis y sin compromiso en menos de una semana.
       </p>
-      <article className="flex justify-center items-center gap-20 py-12">
+      <article className="flex justify-center flex-col md:flex-row items-center gap-20 py-12">
         <div className="w-[350px] ">
           <NumeroDinamico numero={1} />
           <img src="images/index/Forms.svg" alt="Formulario" />

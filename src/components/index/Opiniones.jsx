@@ -27,7 +27,7 @@ export default function Opiniones({ nombre, titulo, opinion, estrellas, secundar
           </div>
         </div>
       ) : (
-        <div className="w-[350px] h-[350px] text-03 rounded-md gradiente flex flex-col justify-center gap-4 items-center">
+        <div className="md:w-[350px] md:h-[350px] w-[300px] h-[300px] text-03 rounded-md gradiente flex flex-col justify-center gap-4 items-center">
           <div className="flex items-center justify-center bg-50 w-20 h-20 rounded-full">
             <img src="icons/userregular.svg" className="w-6" alt="Usuario" />
           </div>
