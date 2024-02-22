@@ -15,6 +15,7 @@ import EspaciosComunes from '../components/venderahora/quinto/EspaciosComunes';
 import EstadoVivienda from '../components/venderahora/sexto/EstadoVivienda';
 import PorqueVender from '../components/venderahora/septimo/PorqueVender';
 import EnviarContacto from '../components/venderahora/octavo/EnviarContacto';
+import MensajeFinal from '../components/venderahora/final/MensajeFinal';
 
 export default function Vender() {
   const [mostrarSiguiente, setMostrarSiguiente] = useState(1);
@@ -43,7 +44,7 @@ export default function Vender() {
       key="siguienteComponente"
       initial={{ x: '100vw' }}
       animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
+      exit={{ x: 0 }}
       transition={{ stiffness: 200, duration: 0.6 }}
     >
       <TipoVivienda toggleComponent={toggleComponent} />
@@ -134,6 +135,18 @@ export default function Vender() {
     </motion.div>
   )
 
+  const mensajeFinalAnimacion = (
+    <motion.div
+      key="siguienteComponente"
+      initial={{ x: '100vw' }}
+      animate={{ x: 0 }}
+      exit={{ x: '-100vw' }}
+      transition={{ stiffness: 200, duration: 0.6 }}
+    >
+      <MensajeFinal toggleComponent={toggleComponent} />
+    </motion.div>
+  )
+
   const renderFormulario = () => {
     switch (mostrarSiguiente) {
       case 1:
@@ -154,6 +167,8 @@ export default function Vender() {
         return porqueVenderAnimacion
       case 9:
         return enviarContactoAnimacion
+      case 10:
+        return mensajeFinalAnimacion
     }
   }
 
