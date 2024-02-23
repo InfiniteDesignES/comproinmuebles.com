@@ -6,8 +6,9 @@ export default function Header() {
       <div className="flex justify-between items-end p-20 min-h-full">
         <div className="flex justify-between items-center w-full">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center">
-              <span className="text-xl font-bold">Logo</span>
+            <div className="flex items-center gap-2">
+              <img width={'80px'} src='/logos/LogoNoBG.png' />
+              <img width={'200px'} src='/logos/linkey2.jpg' />
             </div>
             <div className="text-sm">
               <span>&copy;Copyright 2024</span>
