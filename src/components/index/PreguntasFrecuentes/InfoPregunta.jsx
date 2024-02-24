@@ -11,7 +11,7 @@ export default function PreguntasFrecuentes({ pregunta, respuesta }) {
 
   return (
     <>
-      <article className="my-6 py-6 border-600 border-b-4 rounded-sm">
+      <article className={`my-6 py-6 border-600 border-b-4 rounded-sm transition-all duration-500 ease-in-out overflow-hidden ${isVisible ? 'max-h-96' : 'max-h-20'}`}>
         <div className="text-center w-[350px]" onClick={toggleVisibility}>
           <div className="flex justify-between items-center gap-2">
             <div className="flex gap-4">
@@ -28,9 +28,8 @@ export default function PreguntasFrecuentes({ pregunta, respuesta }) {
 
         {/* Contenedor de la respuesta */}
         <div
-          className={`transition-all duration-500 ease-in-out transform overflow-hidden ${
-            isVisible ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          } text-center w-[350px]`}
+          className="text-center w-[350px]"
+          style={{ overflowY: isVisible ? 'auto' : 'hidden' }}
         >
           <p className="font-medium text-lg text-01 text-left mt-4">{respuesta}</p>
         </div>

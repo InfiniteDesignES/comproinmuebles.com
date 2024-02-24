@@ -1,17 +1,23 @@
 import { useForm } from "react-hook-form";
 
-export default function EnviarContacto() {
+export default function EnviarContacto({toggleComponent}) {
     const {
         register,
         handleSubmit,
         formState: { errors }
-    } = useForm()
+    } = useForm({
+        defaultValues: {
+            metroscuadrados: 75,
+        }
+    });
 
-    const changePrefijo = () => {
-    }
+    const onFormSubmit = (data) => {
+        console.log(data);
+        toggleComponent(data);
+    };
 
     return (
-        <form onSubmit={handleSubmit(onsubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
             <span className="text-2xl font-bold">Enviar contacto</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                 <label htmlFor="direccion" className="text-[11px] mt-2 ">
