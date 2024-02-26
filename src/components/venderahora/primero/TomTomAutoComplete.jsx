@@ -88,7 +88,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
           {suggestions.map((suggestion, index) => (
             <div key={index} className="w-full flex flex-col gap-1 pr-2">
               <button
-                className="w-fullm md:text-lg text-sm h-10 px-4 border-2 border-gray-300 hover:border-[3px] rounded-md text-start border-[var(--color-borde)] cursor-pointer z-10 bg-[var(--blanco)]"
+                className="w-full md:text-lg text-sm h-10 px-4 border-2 border-gray-300 hover:border-[3px] rounded-md text-start border-[var(--color-borde)] cursor-pointer z-10 bg-[var(--blanco)]"
                 onClick={(e) => {
                   e.preventDefault();
                   onSelect(suggestion.address.freeformAddress);

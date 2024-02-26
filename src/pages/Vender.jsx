@@ -160,7 +160,9 @@ export default function Vender() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover pt-20">
       <Header />
-      {renderFormulario()}
+      <div className='w-full flex items-center justify-center'>
+        {renderFormulario()}
+      </div>
     </main>
   );
 }
