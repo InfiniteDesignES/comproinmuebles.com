@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import ToggleButtonsContainer from "./ToggleButtonsContainer";
 
-export default function PorqueVender({toggleComponent}) {
+export default function PorqueVender({ toggleComponent }) {
     const {
         register,
         handleSubmit,
@@ -18,7 +18,7 @@ export default function PorqueVender({toggleComponent}) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4 bg-[var(--fondo-informacion-vivienda)]">
             <span className="text-2xl font-bold">Información de la vivienda</span>
             <ToggleButtonsContainer />
             <label htmlFor="direccion" className="text-[11px] mt-2">

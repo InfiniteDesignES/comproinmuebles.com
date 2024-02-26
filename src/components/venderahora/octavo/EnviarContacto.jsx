@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
 
-export default function EnviarContacto({toggleComponent}) {
+export default function EnviarContacto({ toggleComponent }) {
     const {
         register,
         handleSubmit,
@@ -17,7 +18,7 @@ export default function EnviarContacto({toggleComponent}) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4 bg-[var(--fondo-informacion-vivienda)]">
             <span className="text-2xl font-bold">Enviar contacto</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                 <label htmlFor="direccion" className="text-[11px] mt-2 ">
