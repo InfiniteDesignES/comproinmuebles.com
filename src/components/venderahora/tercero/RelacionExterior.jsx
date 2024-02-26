@@ -21,7 +21,7 @@ export default function RelacionExterior({ toggleComponent }) {
   };
 
   return (
-    <div className="min-w-[500px] w-full md:max-h-[400px] max-h-[500px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
+    <div className="max-w-[500px] w-full md:max-h-[400px] max-h-[500px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
       <h3 className="text-2xl font-bold text-0 mb-4">Relación con el exterior</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full">
         <div className="flex flex-col w-full items-center justify-center">

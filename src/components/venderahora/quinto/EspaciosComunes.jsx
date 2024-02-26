@@ -1,11 +1,8 @@
 import { useForm } from 'react-hook-form';
 
-export default function EspaciosComunes({toggleComponent}) {
+export default function EspaciosComunes({ toggleComponent }) {
     const {
-        register,
         handleSubmit,
-        setValue,
-        watch,
         formState: { errors }
     } = useForm({
         defaultValues: {
