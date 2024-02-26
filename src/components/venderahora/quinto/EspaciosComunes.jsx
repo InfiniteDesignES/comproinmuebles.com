@@ -10,10 +10,7 @@ export default function EspaciosComunes({ toggleComponent }) {
     const [piscina, setPiscina] = useState(0);
 
     const {
-        register,
         handleSubmit,
-        setValue,
-        watch,
         formState: { errors }
     } = useForm({
         defaultValues: {
