@@ -173,7 +173,7 @@ export default function Vender() {
   }
 
   return (
-    <main className="flex h-screen items-center justify-center overflow-hidden bg-[url('images/Background2.svg')] bg-cover">
+    <main className="flex h-screen items-center justify-center overflow-hidden bg-[url('images/Background2.webp')] bg-cover">
       <Header />
       <AnimatePresence>
         {renderFormulario()}

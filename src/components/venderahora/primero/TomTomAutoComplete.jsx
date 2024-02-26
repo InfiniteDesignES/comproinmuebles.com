@@ -13,7 +13,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
   const handleSearch = async (event) => {
     const query = event.target.value;
 
-    if (query.length > 3) {
+    if (query.length > 2) {
       try {
         const response = await axios.get(`https://api.tomtom.com/search/2/search/${query}.json`, {
           params: {
