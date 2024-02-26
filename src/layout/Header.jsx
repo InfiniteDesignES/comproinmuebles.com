@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <div className='w-full md:w-[55rem] px-4 mt-4 h-[3rem] absolute top-0 left-0 z-10'>
       <header className="flex text-03 justify-between items-center rounded-md w-full h-full bg-600 px-4 relative">
-        <a href="/">
+        <a href="/" className='flex gap-2 items-center'>
           <img width={'40px'} src='/logos/LogoNoBG2.png' />
           <div className="font-semibold">Compro Inmuebles</div>
 
