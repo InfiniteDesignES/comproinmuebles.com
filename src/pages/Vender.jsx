@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import Header from '../layout/Header';
 
@@ -158,11 +158,9 @@ export default function Vender() {
   }
 
   return (
-    <main className="flex h-screen items-center justify-center overflow-hidden bg-[url('images/Background2.svg')] bg-cover">
+    <main className="flex min-h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover pt-20">
       <Header />
-      <AnimatePresence>
-        {renderFormulario()}
-      </AnimatePresence>
+      {renderFormulario()}
     </main>
   );
 }

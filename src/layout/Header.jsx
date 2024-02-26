@@ -6,15 +6,15 @@ export default function Header() {
   const [claseMenu, setClaseMenu] = useState("hidden");
 
   const showMenuMobile = () => {
-    if (claseMenu == "opacity-1") {
-      setClaseMenu("opacity-0")
+    if (claseMenu == "hidden") {
+      setClaseMenu("flex")
     } else {
-      setClaseMenu("opacity-1")
+      setClaseMenu("hidden")
     }
   }
 
   return (
-    <div className='w-full md:w-[55rem] px-4 mt-4 h-[3rem] absolute top-0 left-0'>
+    <div className='w-full md:w-[55rem] px-4 mt-4 h-[3rem] absolute top-0 left-0 z-10'>
       <header className="flex text-03 justify-between items-center rounded-md w-full h-full bg-600 px-4 relative">
         <a href="/">
           <div className="font-semibold">Compro Inmuebles</div>
