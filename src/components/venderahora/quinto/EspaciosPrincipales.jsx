@@ -4,20 +4,12 @@ import { useState } from 'react';
 import EspaciosPrincipalesBoton from "./EspaciosPrincipalesBoton";
 
 export default function EspaciosPrincipales({ toggleComponent }) {
-    const [hovers, setHovers] = useState([false, false]);
 
     const [cantidadHabitaciones, setCantidadHabitaciones] = useState(0);
     const [cantidadBanos, setCantidadBanos] = useState(0);
     const [cantidadAscensor, setCantidadAscensor] = useState(0);
     const [cantidadGaraje, setCantidadGaraje] = useState(0);
 
-    const handleMouseEnter = (index) => {
-        setHovers(hovers.map((hover, i) => (i === index ? true : hover)));
-    };
-
-    const handleMouseLeave = (index) => {
-        setHovers(hovers.map((hover, i) => (i === index ? false : hover)));
-    };
 
     const {
         register,
@@ -43,8 +35,6 @@ export default function EspaciosPrincipales({ toggleComponent }) {
                 <div className="flex flex-col w-full items-center justify-center px-8">
                     <div
                         className={`divImagenFormulario ${cantidadHabitaciones == 0 ? 'colorGrisFormulario' : ''}`}
-                        onMouseEnter={() => handleMouseEnter(0)}
-                        onMouseLeave={() => handleMouseLeave(0)}
                     >
                         <img src="icons/habitaciones.svg" alt="Exterior" className="max-w-[168px] h-[168px] md:h-full object-contain p-4 cursor-pointer hoverImagenFormulario" />
                     </div>
@@ -54,8 +44,6 @@ export default function EspaciosPrincipales({ toggleComponent }) {
                 <div className="flex flex-col w-full items-center justify-center px-8">
                     <div
                         className={`divImagenFormulario ${cantidadBanos == 0 ? 'colorGrisFormulario' : ''}`}
-                        onMouseEnter={() => handleMouseEnter(0)}
-                        onMouseLeave={() => handleMouseLeave(0)}
                     >
                         <img src="icons/duchas.svg" alt="Interior" className="max-w-[168px] h-[168px] md:h-full w-full object-contain clear-start p-4 cursor-pointer hoverImagenFormulario" />
                     </div>
@@ -65,8 +53,6 @@ export default function EspaciosPrincipales({ toggleComponent }) {
                 <div className="flex flex-col w-full items-center justify-center px-8">
                     <div
                         className={`divImagenFormulario ${cantidadAscensor == 0 ? 'colorGrisFormulario' : ''}`}
-                        onMouseEnter={() => handleMouseEnter(0)}
-                        onMouseLeave={() => handleMouseLeave(0)}
                     >
                         <img src="icons/ascensor.svg" alt="Interior" className="max-w-[168px] h-[168px] md:h-full w-full object-contain clear-start p-4 cursor-pointer hoverImagenFormulario" />
                     </div>
@@ -76,8 +62,6 @@ export default function EspaciosPrincipales({ toggleComponent }) {
                 <div className="flex flex-col w-full items-center justify-center px-8">
                     <div
                         className={`divImagenFormulario ${cantidadGaraje == 0 ? 'colorGrisFormulario' : ''}`}
-                        onMouseEnter={() => handleMouseEnter(0)}
-                        onMouseLeave={() => handleMouseLeave(0)}
                     >
                         <img src="icons/garaje.svg" alt="Interior" className="max-w-[168px] h-[168px] md:h-full w-full object-contain clear-start p-4 cursor-pointer hoverImagenFormulario" />
                     </div>
