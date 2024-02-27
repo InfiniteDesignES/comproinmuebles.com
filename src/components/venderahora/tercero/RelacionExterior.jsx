@@ -1,10 +1,10 @@
+/* eslint-disable react/prop-types */
+import { useState, useContext } from 'react';
 
-
-
-
-import { useState } from 'react';
+import { Context } from '../../../pages/Vender.jsx';
 
 export default function RelacionExterior({ toggleComponent }) {
+  const { formulario, setFormulario } = useContext(Context);
   const [hovers, setHovers] = useState([false, false]);
   const [selected, setSelected] = useState(null);
 

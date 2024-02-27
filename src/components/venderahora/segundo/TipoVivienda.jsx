@@ -1,7 +1,10 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useContext } from 'react';
 
-// eslint-disable-next-line react/prop-types
+import { Context } from '../../../pages/Vender.jsx';
+
 export default function TipoVivienda({ toggleComponent }) {
+  const { formulario, setFormulario } = useContext(Context);
   const [hovers, setHovers] = useState([false, false]);
   const [selected, setSelected] = useState(null);
 

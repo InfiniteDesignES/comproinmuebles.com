@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { LoadScript, GoogleMap } from '@react-google-maps/api';
 
@@ -9,7 +9,11 @@ import TomTomAutoComplete from './TomTomAutoComplete';
 
 const mapsApi = 'AIzaSyDH6pOimF4MMMzfqde8JsXxKdXLvD1HLvE';
 
+import { Context } from '../../../pages/Vender.jsx';
+
 export default function InformacionVivienda({ toggleComponent }) {
+  const { formulario, setFormulario } = useContext(Context);
+
   const mapContainerStyle = {
     width: '100%',
     minHeight: '200px',
@@ -39,8 +43,8 @@ export default function InformacionVivienda({ toggleComponent }) {
   const numeroCalle = watch('numero_calle');
 
   const onFormSubmit = (data) => {
-    console.log(data);
-    toggleComponent(data);
+    setFormulario({ ...formulario, ...data });
+    toggleComponent();
   };
 
   const handleSelectAddress = useCallback(

@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, createContext } from 'react';
 
 import Header from '../layout/Header';
 
@@ -17,7 +16,11 @@ import PorqueVender from '../components/venderahora/septimo/PorqueVender';
 import EnviarContacto from '../components/venderahora/octavo/EnviarContacto';
 import MensajeFinal from '../components/venderahora/final/MensajeFinal';
 
+export const Context = createContext([]);
+
 export default function Vender() {
+  const [formulario, setFormulario] = useState([]);
+
   const [mostrarSiguiente, setMostrarSiguiente] = useState(1);
 
   const toggleComponent = () => {
@@ -93,7 +96,9 @@ export default function Vender() {
     <main className="flex min-h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover pt-20">
       <Header />
       <div className='w-full flex items-center justify-center'>
-        {renderFormulario()}
+      <Context.Provider value={{ formulario, setFormulario }}>
+          {renderFormulario()}
+        </Context.Provider>
       </div>
     </main>
   );
