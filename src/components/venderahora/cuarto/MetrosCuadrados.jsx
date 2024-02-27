@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import * as Slider from '@radix-ui/react-slider';
 import "../../../styles/Slider.css"
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { Context } from '../../../pages/Vender.jsx';
+
 export default function MetrosCuadrados({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const [sliderValue, setSliderValue] = useState(75);
 
     const handleSliderChange = (value) => {
@@ -23,7 +27,7 @@ export default function MetrosCuadrados({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, "metrosCuadrados": sliderValue });
         toggleComponent(data);
     };
 
