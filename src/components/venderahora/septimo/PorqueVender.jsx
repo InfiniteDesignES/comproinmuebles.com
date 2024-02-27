@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useForm, useContext } from "react-hook-form";
+import { useContext } from 'react';
+import { useForm } from "react-hook-form";
 import ToggleButtonsContainer from "./ToggleButtonsContainer";
 
 import { Context } from '../../../pages/Vender.jsx';
