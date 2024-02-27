@@ -1,6 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
+import { useContext } from 'react';
 
-export default function EnviarContacto({toggleComponent}) {
+import { Context } from '../../../pages/Vender.jsx';
+
+export default function EnviarContacto({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const {
         register,
         handleSubmit,
@@ -12,12 +17,12 @@ export default function EnviarContacto({toggleComponent}) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, ...data });
         toggleComponent(data);
     };
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4 bg-[var(--fondo-informacion-vivienda)]">
             <span className="text-2xl font-bold">Enviar contacto</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                 <label htmlFor="direccion" className="text-[11px] mt-2 ">

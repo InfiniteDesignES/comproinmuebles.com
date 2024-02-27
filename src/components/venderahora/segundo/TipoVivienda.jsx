@@ -1,7 +1,10 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useContext } from 'react';
 
-// eslint-disable-next-line react/prop-types
+import { Context } from '../../../pages/Vender.jsx';
+
 export default function TipoVivienda({ toggleComponent }) {
+  const { formulario, setFormulario } = useContext(Context);
   const [hovers, setHovers] = useState([false, false]);
   const [selected, setSelected] = useState(null);
 
@@ -24,7 +27,7 @@ export default function TipoVivienda({ toggleComponent }) {
         <div className="flex flex-col w-full items-center justify-center">
           <div
             className={`divImagenFormulario ${selected !== 0 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(0); toggleComponent() }}
+            onClick={() => { handleClick(0); toggleComponent(); setFormulario({ ...formulario, tipo_vivienda: 'chalet' })}}
             onMouseEnter={() => handleMouseEnter(0)}
             onMouseLeave={() => handleMouseLeave(0)}
           >
@@ -44,7 +47,7 @@ export default function TipoVivienda({ toggleComponent }) {
         <div className="flex flex-col w-full items-center justify-center">
           <div
             className={`divImagenFormulario ${selected !== 1 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(1); toggleComponent() }}
+            onClick={() => { handleClick(1); toggleComponent(); setFormulario({ ...formulario, tipo_vivienda: 'piso' })}}
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave(1)}
           >
