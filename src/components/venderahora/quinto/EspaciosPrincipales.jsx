@@ -1,10 +1,13 @@
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { set, useForm } from 'react-hook-form';
+import { useState, useContext } from 'react';
 
 import EspaciosPrincipalesBoton from "./EspaciosPrincipalesBoton";
 
-export default function EspaciosPrincipales({ toggleComponent }) {
+import { Context } from '../../../pages/Vender.jsx';
 
+export default function EspaciosPrincipales({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const [cantidadHabitaciones, setCantidadHabitaciones] = useState(0);
     const [cantidadBanos, setCantidadBanos] = useState(0);
     const [cantidadAscensor, setCantidadAscensor] = useState(0);
@@ -24,7 +27,7 @@ export default function EspaciosPrincipales({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, ...data });
         toggleComponent(data);
     };
 

@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
+import { useContext } from 'react';
+
+import { Context } from '../../../pages/Vender.jsx';
 
 export default function EnviarContacto({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const {
         register,
         handleSubmit,
@@ -13,7 +17,7 @@ export default function EnviarContacto({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, ...data });
         toggleComponent(data);
     };
 

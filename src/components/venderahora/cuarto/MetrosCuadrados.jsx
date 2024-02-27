@@ -27,7 +27,7 @@ export default function MetrosCuadrados({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, ...data });
         toggleComponent(data);
     };
 

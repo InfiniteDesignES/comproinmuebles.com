@@ -1,7 +1,11 @@
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { set, useForm } from 'react-hook-form';
+import { useState, useContext } from 'react';
+
+import { Context } from '../../../pages/Vender.jsx';
 
 export default function EspaciosComunes({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const [terraza, setTerraza] = useState(0);
     const [balcon, setBalcon] = useState(0);
     const [jardin, setJardin] = useState(0);
@@ -19,7 +23,7 @@ export default function EspaciosComunes({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, ...data });
         toggleComponent(data);
     };
 

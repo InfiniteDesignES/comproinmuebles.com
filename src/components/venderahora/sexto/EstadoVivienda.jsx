@@ -1,7 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+
+import { Context } from '../../../pages/Vender.jsx';
 
 export default function EstadoVivienda({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const [selected, setSelected] = useState(null);
 
     const handleClick = (index) => {
@@ -21,7 +25,7 @@ export default function EstadoVivienda({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, ...data });
         toggleComponent(data);
     };
 

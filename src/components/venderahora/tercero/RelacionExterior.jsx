@@ -27,7 +27,7 @@ export default function RelacionExterior({ toggleComponent }) {
         <div className="flex flex-col w-full items-center justify-center">
           <div
             className={`divImagenFormulario ${selected !== 0 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(0); toggleComponent() }}
+            onClick={() => { handleClick(0); toggleComponent(); setFormulario({ ...formulario, relacion_exterior: 'exterior' })}}
             onMouseEnter={() => handleMouseEnter(0)}
             onMouseLeave={() => handleMouseLeave(0)}
           >
@@ -47,7 +47,7 @@ export default function RelacionExterior({ toggleComponent }) {
         <div className="flex flex-col w-full items-center justify-center">
           <div
             className={`divImagenFormulario ${selected !== 1 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(1); toggleComponent() }}
+            onClick={() => { handleClick(1); toggleComponent(); setFormulario({ ...formulario, relacion_exterior: 'interior'})}}
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave(1)}
           >
