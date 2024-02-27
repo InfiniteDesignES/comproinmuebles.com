@@ -27,13 +27,13 @@ export default function EspaciosPrincipales({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        setFormulario({ ...formulario, ...data });
+        setFormulario({ ...formulario, "espaciosPrincipales": { "habitaciones": cantidadHabitaciones, "baños": cantidadBanos, "ascensores": cantidadAscensor, "garaje": cantidadGaraje } });
         toggleComponent(data);
     };
 
     return (
         <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col">
-            <h3 className="text-2xl font-semibold">Relación con el exterior</h3>
+            <h3 className="text-2xl font-semibold">Espacios principales</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center px-8">
                     <div

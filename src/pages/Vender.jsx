@@ -68,6 +68,7 @@ export default function Vender() {
   )
 
   const renderFormulario = () => {
+    console.log(formulario)
     switch (mostrarSiguiente) {
       case 1:
         return infoViviendaAnimacion
@@ -96,7 +97,7 @@ export default function Vender() {
     <main className="flex min-h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover pt-20">
       <Header />
       <div className='w-full flex items-center justify-center'>
-      <Context.Provider value={{ formulario, setFormulario }}>
+        <Context.Provider value={{ formulario, setFormulario }}>
           {renderFormulario()}
         </Context.Provider>
       </div>

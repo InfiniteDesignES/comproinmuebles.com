@@ -23,13 +23,13 @@ export default function EspaciosComunes({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        setFormulario({ ...formulario, ...data });
+        setFormulario({ ...formulario, "espaciosComunes": { "terraza": terraza, "balcon": balcon, "jardin": jardin, "trastero": trastero, "portero": portero, "piscina": piscina } });
         toggleComponent(data);
     };
 
     return (
         <div className="relacionExterior max-w-[1120px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col">
-            <h3 className="text-2xl font-semibold">Relación con el exterior</h3>
+            <h3 className="text-2xl font-semibold">Espacios comunes</h3>
             <div className="grid grid-cols-1 md:grid-cols-6 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center">
                     <div
