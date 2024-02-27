@@ -1,7 +1,11 @@
-import { useForm } from "react-hook-form";
+/* eslint-disable react/prop-types */
+import { useForm, useContext } from "react-hook-form";
 import ToggleButtonsContainer from "./ToggleButtonsContainer";
 
+import { Context } from '../../../pages/Vender.jsx';
+
 export default function PorqueVender({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const {
         register,
         handleSubmit,
@@ -13,7 +17,7 @@ export default function PorqueVender({ toggleComponent }) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, data });
         toggleComponent(data);
     };
 
