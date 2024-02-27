@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <footer className="bg-600 text-03">
-      <div className="flex justify-between items-center p-20 w-full md:flex-row flex-col md:gap-0 gap-4 text-center">
+      <div className="flex flex-col items-center justify-between w-full gap-4 p-20 text-center md:flex-row md:gap-0">
         <div className="flex flex-col gap-4">
 
           <div className="flex items-center gap-2">
@@ -16,7 +16,7 @@ export default function Header() {
             <span>ComproInmuebles</span>
           </div>
         </div>
-        <div className="text-lg flex md:gap-16 gap-4 md:flex-row flex-col">
+        <div className="flex flex-col gap-4 text-lg md:gap-16 md:flex-row">
           <Link to="" className="hover:underline">
             Política de Privacidad
           </Link>
