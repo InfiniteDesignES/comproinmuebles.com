@@ -7,6 +7,7 @@ import Contacto from './pages/Contacto.jsx'
 import InfoLegal from './pages/InfoLegal.jsx'
 import Vender from './pages/Vender.jsx'
 import MetrosCuadrados from './components/venderahora/cuarto/MetrosCuadrados.jsx'
+import Error404 from './pages/Error404.jsx'; 
 
 import './styles/Tailwind.css';
 import './styles/Main.css';
@@ -16,6 +17,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 
 const router = createBrowserRouter([
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
     path: "/legal-info",
     element: <InfoLegal />,
   },
+  {
+    path: "/error",
+    element: <Error404/>,
+  }
 ]);
 
 
