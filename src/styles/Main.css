@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
@@ -7,8 +13,7 @@ body {
   letter-spacing: -0.2px;
 }
 
-
-header{
+header {
   color: #fefefe;
 }
 
@@ -29,4 +34,12 @@ input {
   border: 2px solid var(--color-borde);
   border-radius: 6px;
   font-size: 1rem;
+}
+
+.menu_icon > div {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
 }

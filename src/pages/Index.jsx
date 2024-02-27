@@ -14,14 +14,14 @@ export default function Index() {
       <section className='h-screen bg-[url("images/Background.svg")] bg-cover'>
         <Titulo />
       </section>
-      <section>
+      <section >
         <ComoFunciona />
       </section>
       <section className="border-t mx-12 rounded-none border-02">
         <PorqueEscogernos />
       </section>
       <section className="border-t mx-12 rounded-none border-02">
-        <main className="h-screen flex justify-center items-center gap-2">
+        <main className="h-screen flex flex-col md:flex-row justify-center items-center gap-2 my-10">
           <Opiniones
             nombre={'Juan Zas'}
             titulo={'Buena experiencia'}

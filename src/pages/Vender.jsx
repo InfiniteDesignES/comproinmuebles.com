@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useState, createContext } from 'react';
 
 import Header from '../layout/Header';
 
@@ -17,137 +16,59 @@ import PorqueVender from '../components/venderahora/septimo/PorqueVender';
 import EnviarContacto from '../components/venderahora/octavo/EnviarContacto';
 import MensajeFinal from '../components/venderahora/final/MensajeFinal';
 
+export const Context = createContext([]);
+
 export default function Vender() {
+  const [formulario, setFormulario] = useState([]);
+
   const [mostrarSiguiente, setMostrarSiguiente] = useState(1);
 
-  // Función para alternar los componentes
   const toggleComponent = () => {
     setMostrarSiguiente(mostrarSiguiente + 1);
   };
 
   const infoViviendaAnimacion = (
-    <motion.div
-      key="informacionVivienda"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: 0 }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <InformacionVivienda toggleComponent={toggleComponent} />
-      {/* <TipoVivienda onVolver={toggleComponent} /> */}
-    </motion.div>
-
+    <InformacionVivienda toggleComponent={toggleComponent} />
   )
 
   const tipoViviendaAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: 0 }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <TipoVivienda toggleComponent={toggleComponent} />
-    </motion.div>
+    <TipoVivienda toggleComponent={toggleComponent} />
   )
 
   const relacionExteriorAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <RelacionExterior toggleComponent={toggleComponent} />
-    </motion.div>
+    <RelacionExterior toggleComponent={toggleComponent} />
   )
 
   const metrosCuadradosAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <MetrosCuadrados toggleComponent={toggleComponent} />
-    </motion.div>
+    <MetrosCuadrados toggleComponent={toggleComponent} />
   )
 
   const espaciosPrincipalesAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <EspaciosPrincipales toggleComponent={toggleComponent} />
-    </motion.div>
+    <EspaciosPrincipales toggleComponent={toggleComponent} />
   )
 
   const espaciosComunesAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <EspaciosComunes toggleComponent={toggleComponent} />
-    </motion.div>
+    <EspaciosComunes toggleComponent={toggleComponent} />
   )
 
   const estadoViviendaAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <EstadoVivienda toggleComponent={toggleComponent} />
-    </motion.div>
+    <EstadoVivienda toggleComponent={toggleComponent} />
   )
 
   const porqueVenderAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <PorqueVender toggleComponent={toggleComponent} />
-    </motion.div>
+    <PorqueVender toggleComponent={toggleComponent} />
   )
 
   const enviarContactoAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <EnviarContacto toggleComponent={toggleComponent} />
-    </motion.div>
+    <EnviarContacto toggleComponent={toggleComponent} />
   )
 
   const mensajeFinalAnimacion = (
-    <motion.div
-      key="siguienteComponente"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100vw' }}
-      transition={{ stiffness: 200, duration: 0.6 }}
-    >
-      <MensajeFinal toggleComponent={toggleComponent} />
-    </motion.div>
+    <MensajeFinal toggleComponent={toggleComponent} />
   )
 
   const renderFormulario = () => {
+    console.log(formulario)
     switch (mostrarSiguiente) {
       case 1:
         return infoViviendaAnimacion
@@ -173,11 +94,13 @@ export default function Vender() {
   }
 
   return (
-    <main className="flex h-screen items-center justify-center overflow-hidden bg-[url('images/Background2.svg')] bg-cover">
+    <main className="flex min-h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover pt-20">
       <Header />
-      <AnimatePresence>
-        {renderFormulario()}
-      </AnimatePresence>
+      <div className='w-full flex items-center justify-center'>
+        <Context.Provider value={{ formulario, setFormulario }}>
+          {renderFormulario()}
+        </Context.Provider>
+      </div>
     </main>
   );
 }

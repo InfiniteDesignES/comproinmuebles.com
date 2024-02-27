@@ -13,7 +13,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
   const handleSearch = async (event) => {
     const query = event.target.value;
 
-    if (query.length > 3) {
+    if (query.length > 2) {
       try {
         const response = await axios.get(`https://api.tomtom.com/search/2/search/${query}.json`, {
           params: {
@@ -77,19 +77,18 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
       />
       <label
         htmlFor={id}
-        className={`absolute left-2 top-1/2 transform -translate-y-1/2 text-[11px] text-[var(--color-texto-secundario)] transition-all duration-300 ease-in-out pointer-events-none ${
-          isInputFocused ? 'scale-75 -translate-y-10 -translate-x-4' : ''
-        }`}
+        className={`absolute left-2 top-1/2 transform -translate-y-1/2 text-[11px] text-[var(--color-texto-secundario)] transition-all duration-300 ease-in-out pointer-events-none ${isInputFocused ? 'scale-75 -translate-y-10 -translate-x-4' : ''
+          }`}
       >
         {'Dirección completa'} {required && <span className="text-[var(--color-rojo)]">*</span>}
       </label>
 
       {isSuggestionsVisible && (
-        <div className="absolute w-full mt-2 max-h-28 overflow-y-auto z-10 gap-2 flex flex-col bg-[var(--blanco)]">
+        <div className="absolute border-2 p-4 rounded-md border-[var(--color-borde)] w-full mt-2 max-h-28 overflow-y-auto z-10 gap-2 flex flex-col bg-[var(--blanco)]">
           {suggestions.map((suggestion, index) => (
             <div key={index} className="w-full flex flex-col gap-1 pr-2">
               <button
-                className="w-full h-10 px-4 border-2 border-gray-300 hover:border-[3px] rounded-md text-start border-[var(--color-borde)]  text-base cursor-pointer z-10 bg-[var(--blanco)]"
+                className="w-full md:text-lg text-sm h-10 px-4 border-2 border-gray-300 hover:border-[3px] rounded-md text-start border-[var(--color-borde)] cursor-pointer z-10 bg-[var(--blanco)]"
                 onClick={(e) => {
                   e.preventDefault();
                   onSelect(suggestion.address.freeformAddress);

@@ -1,6 +1,10 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useContext } from 'react';
+
+import { Context } from '../../../pages/Vender.jsx';
 
 export default function TipoVivienda({ toggleComponent }) {
+  const { formulario, setFormulario } = useContext(Context);
   const [hovers, setHovers] = useState([false, false]);
   const [selected, setSelected] = useState(null);
 
@@ -17,13 +21,15 @@ export default function TipoVivienda({ toggleComponent }) {
   };
 
   return (
-    <div className="min-w-[500px] w-full md:max-h-[400px] max-h-[500px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
+
+    <div className="max-w-[500px] w-full md:max-h-[400px] max-h-[500px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
       <h3 className="text-2xl font-bold text-0 mb-4">Tipo de vivienda</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full">
         <div className="flex flex-col w-full items-center justify-center">
+
           <div
             className={`divImagenFormulario ${selected !== 0 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(0); toggleComponent() }}
+            onClick={() => { handleClick(0); toggleComponent(); setFormulario({ ...formulario, tipo_vivienda: 'chalet' })}}
             onMouseEnter={() => handleMouseEnter(0)}
             onMouseLeave={() => handleMouseLeave(0)}
           >
@@ -40,10 +46,10 @@ export default function TipoVivienda({ toggleComponent }) {
           ></div>
           {/* <p className="text-3xl font-medium text-[var(--azul-secundario)]">Piso</p> */}
         </div>
-        <div className="flex flex-col w-full items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-full">
           <div
             className={`divImagenFormulario ${selected !== 1 ? 'colorGrisFormulario' : ''}`}
-            onClick={() => { handleClick(1); toggleComponent() }}
+            onClick={() => { handleClick(1); toggleComponent(); setFormulario({ ...formulario, tipo_vivienda: 'piso' })}}
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave(1)}
           >

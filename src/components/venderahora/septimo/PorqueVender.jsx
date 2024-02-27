@@ -1,7 +1,12 @@
+/* eslint-disable react/prop-types */
+import { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import ToggleButtonsContainer from "./ToggleButtonsContainer";
 
-export default function PorqueVender({toggleComponent}) {
+import { Context } from '../../../pages/Vender.jsx';
+
+export default function PorqueVender({ toggleComponent }) {
+    const { formulario, setFormulario } = useContext(Context);
     const {
         register,
         handleSubmit,
@@ -13,12 +18,12 @@ export default function PorqueVender({toggleComponent}) {
     });
 
     const onFormSubmit = (data) => {
-        console.log(data);
+        setFormulario({ ...formulario, data });
         toggleComponent(data);
     };
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4 bg-[var(--fondo-informacion-vivienda)]">
             <span className="text-2xl font-bold">Información de la vivienda</span>
             <ToggleButtonsContainer />
             <label htmlFor="direccion" className="text-[11px] mt-2">
