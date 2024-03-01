@@ -1,11 +1,11 @@
-export default function InfoTexts   ({n}) {
+export default function InfoTexts({ n }) {
 
-    if (n === 0 ||  n === null || n === undefined) {
+    if (n === 0 || n === null || n === undefined) {
         n = 1
     }
-     if (n === 1) {
-        return(
-            <div className="flex flex-col mt-10 ml-3 w-100">
+    if (n === 1) {
+        return (
+            <div className="flex flex-col mt-10 w-full">
                 <h3 className="mb-10 ml-9 text-600" >Política de Privacidad </h3>
                 <p className="leading-9 w-100 p-14 text-negro">
                     <strong>Información que Recopilamos:</strong><br />
@@ -29,9 +29,9 @@ export default function InfoTexts   ({n}) {
                 </p>
             </div>
         )
-    }else if (n === 2) {
-        return(
-            <div className="flex flex-col mt-10 w-100 ">
+    } else if (n === 2) {
+        return (
+            <div className="flex flex-col mt-10 w-full ">
                 <h3 className="mb-10 ml-9 text-600">Términos y Condiciones </h3>
                 <p className="leading-9 w-100 p-14 text-negro">
                     <strong>Aceptación de Términos:</strong>
@@ -60,20 +60,20 @@ export default function InfoTexts   ({n}) {
                 </p>
             </div>
         )
-    }else  if (n === 3 ) {
-        return(
+    } else if (n === 3) {
+        return (
             <div className="flex flex-col mt-10 w-100">
                 <h3 className="mb-10 ml-9 text-600">Política de Cookies </h3>
                 <p className="leading-9 p-14 w-100 text-negro">
-                    
+
                     Te informamos que, en cumplimiento de la normativa vigente en materia de protección de datos, el sitio web de Compro Inmueble utiliza cookies propias y de terceros.
                     <br />
                     <strong>¿Qué son las cookies? </strong>
                     <br />
                     Una cookie es un fichero que se descarga en el dispositivo del usuario al acceder al sitio web, con la finalidad de almacenar y recuperar información sobre la navegación realizada en el dispositivo.
                     <br />
-                     <strong>Tipos de cookies:</strong>
-                     <br />
+                    <strong>Tipos de cookies:</strong>
+                    <br />
                     Según la entidad que las gestione:
                     Cookies propias: Enviadas al equipo terminal del usuario desde un dominio gestionado por Compro Inmueble.<br />
                     Cookies de terceros: Enviadas desde un dominio no gestionado por Compro Inmueble.<br />
