@@ -13,7 +13,7 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
   const handleSearch = async (event) => {
     const query = event.target.value;
 
-    if (query.length > 2) {
+    if (query.length > 1) {
       try {
         const response = await axios.get(`https://api.tomtom.com/search/2/search/${query}.json`, {
           params: {
@@ -51,9 +51,11 @@ const TomTomAutoComplete = ({ register, id, required, onSelect, onSelectCoords, 
     };
   }, []);
 
-  const handleInputFocus = () => {
+  const handleInputFocus = (e) => {
     setIsInputFocused(true);
-    setIsSuggestionsVisible(true); // Mostrar sugerencias al enfocar
+    if (e.target.value.length > 2) {
+      setIsSuggestionsVisible(true); // Mostrar sugerencias al enfocar      
+    }
   };
 
   const handleInputBlur = (e) => {
