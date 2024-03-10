@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+/* eslint-disable react/prop-types */
 export default function InfoTexts({ n }) {
 
     if (n === 0 || n === null || n === undefined) {
@@ -6,8 +9,8 @@ export default function InfoTexts({ n }) {
     if (n === 1) {
         return (
             <div className="flex flex-col mt-10 w-full">
-                <h3 className="mb-10 ml-9 text-600" >Política de Privacidad </h3>
-                <p className="leading-9 w-100 p-14 text-negro">
+                <h3 className=" pl-8 md:pl-14 text-600" >Política de Privacidad </h3>
+                <p className="leading-9 w-100 p-8 md:p-14 text-negro">
                     <strong>Información que Recopilamos:</strong><br />
                     En Compro Inmueble, recopilamos información personal limitada y relevante para proporcionar nuestros servicios. Esto puede incluir nombres, direcciones, información de contacto y detalles de propiedades.
                     <br />
@@ -32,8 +35,8 @@ export default function InfoTexts({ n }) {
     } else if (n === 2) {
         return (
             <div className="flex flex-col mt-10 w-full ">
-                <h3 className="mb-10 ml-9 text-600">Términos y Condiciones </h3>
-                <p className="leading-9 w-100 p-14 text-negro">
+                <h3 className=" pl-8 md:pl-14 text-600">Términos y Condiciones </h3>
+                <p className="leading-9 w-100  p-8 md:p-14 text-negro">
                     <strong>Aceptación de Términos:</strong>
                     <br />
                     Al acceder y utilizar los servicios de Compro Inmueble, el usuario acepta estos Términos y Condiciones en su totalidad. Si no está de acuerdo con algún término, no utilice nuestros servicios.
@@ -63,8 +66,8 @@ export default function InfoTexts({ n }) {
     } else if (n === 3) {
         return (
             <div className="flex flex-col mt-10 w-100">
-                <h3 className="mb-10 ml-9 text-600">Política de Cookies </h3>
-                <p className="leading-9 p-14 w-100 text-negro">
+                <h3 className=" pl-8 md:pl-14 text-600">Política de Cookies </h3>
+                <p className="leading-9  p-8 md:p-14 w-100 text-negro">
 
                     Te informamos que, en cumplimiento de la normativa vigente en materia de protección de datos, el sitio web de Compro Inmueble utiliza cookies propias y de terceros.
                     <br />
@@ -74,23 +77,28 @@ export default function InfoTexts({ n }) {
                     <br />
                     <strong>Tipos de cookies:</strong>
                     <br />
-                    Según la entidad que las gestione:
-                    Cookies propias: Enviadas al equipo terminal del usuario desde un dominio gestionado por Compro Inmueble.<br />
-                    Cookies de terceros: Enviadas desde un dominio no gestionado por Compro Inmueble.<br />
-                    Según el tiempo de duración:<br />
-                    Cookies de sesión: Temporales y eliminadas al cerrar la sesión o salir del sitio.<br />
-                    Cookies permanentes: Almacenadas en el dispositivo del usuario hasta su fecha de caducidad.<br />
-                    Cookies utilizadas por Compro Inmueble:<br />
-                    Cookies técnicas:<br />
-                    Permiten la navegación y el uso de las diferentes opciones o servicios en el sitio web.<br />
-                    Cookies de personalización:<br />
-                    Permiten acceder al servicio con características predefinidas según criterios como idioma o tipo de navegador.<br />
-                    Cookies de análisis:<br />
-                    Facilitan el seguimiento y análisis del comportamiento de los usuarios en el sitio web para mejorar la experiencia y el contenido.<br />
-                    Cookies publicitarias:<br />
-                    Gestionan eficazmente los espacios publicitarios y ofrecen anuncios relevantes.<br />
-                    Consentimiento del usuario:<br />
-                    La base jurídica que legitima estos tratamientos es el consentimiento del usuario, prestado a través de las opciones de configuración de cookies. El usuario puede rechazar el uso de cookies mediante los mecanismos indicados a continuación.
+                    <div>
+                        <p>Según la entidad que las gestione:</p>
+                        <ul>
+                            <li><strong>Cookies propias:</strong> Enviadas al equipo terminal del usuario desde un dominio gestionado por Compro Inmueble.</li>
+                            <li><strong>Cookies de terceros:</strong> Enviadas desde un dominio no gestionado por Compro Inmueble.</li>
+                        </ul>
+                        <p>Según el tiempo de duración:</p>
+                        <ul>
+                            <li><strong>Cookies de sesión:</strong> Temporales y eliminadas al cerrar la sesión o salir del sitio.</li>
+                            <li><strong>Cookies permanentes:</strong> Almacenadas en el dispositivo del usuario hasta su fecha de caducidad.</li>
+                        </ul>
+                        <p>Cookies utilizadas por Compro Inmueble:</p>
+                        <ul>
+                            <li><strong>Cookies técnicas:</strong> Permiten la navegación y el uso de las diferentes opciones o servicios en el sitio web.</li>
+                            <li><strong>Cookies de personalización:</strong> Permiten acceder al servicio con características predefinidas según criterios como idioma o tipo de navegador.</li>
+                            <li><strong>Cookies de análisis:</strong> Facilitan el seguimiento y análisis del comportamiento de los usuarios en el sitio web para mejorar la experiencia y el contenido.</li>
+                            <li><strong>Cookies publicitarias:</strong> Gestionan eficazmente los espacios publicitarios y ofrecen anuncios relevantes.</li>
+                        </ul>
+                        <p><strong>Consentimiento del usuario:</strong></p>
+                        <p>La base jurídica que legitima estos tratamientos es el consentimiento del usuario, prestado a través de las opciones de configuración de cookies. El usuario puede rechazar el uso de cookies mediante los mecanismos indicados a continuación.</p>
+                    </div>
+
                     <br />
                     <strong>Configuración de cookies:</strong>
                     <br />
@@ -102,7 +110,7 @@ export default function InfoTexts({ n }) {
                     <br />
                     <strong>Derechos de los usuarios en protección de datos:</strong>
                     <br />
-                    Para obtener más información sobre el tratamiento de datos personales y ejercitar tus derechos, visita nuestra Política de Privacidad o ponte en contacto con nosotros a través de nuestro correo electrónico: correo@comproinmueble.com.
+                    Para obtener más información sobre el tratamiento de datos personales y ejercitar tus derechos, visita nuestra Política de Privacidad o ponte en contacto con nosotros a través de nuestro correo electrónico: <i> <Link to={"/contact"} className="text-600">correo@comproinmueble.com</Link></i>
                 </p>
             </div>
 

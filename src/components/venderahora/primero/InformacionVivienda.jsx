@@ -85,7 +85,6 @@ export default function InformacionVivienda({ toggleComponent }) {
     >
       <span className="text-2xl font-bold">Información de la vivienda</span>
 
-      {/* <FloatingLabelInput label="Dirección completa" id="direccion" register={register} required={true} /> */}
       <TomTomAutoComplete
         register={register}
         id="direccion"
