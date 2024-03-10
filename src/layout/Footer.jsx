@@ -17,16 +17,16 @@ export default function Header() {
           </div>
         </div>
         <div className="flex flex-col gap-4 text-lg md:gap-16 md:flex-row">
-          <Link to="" className="hover:underline">
+          <Link to="/legal-info" className="hover:underline">
             Política de Privacidad
           </Link>
-          <Link to="" className="hover:underline">
+          <Link to="/legal-info" className="hover:underline">
             Términos y Condiciones
           </Link>
-          <Link to="" className="hover:underline">
+          <Link to="/legal-info" className="hover:underline">
             Cookies
           </Link>
-          <Link to="" className="hover:underline">
+          <Link to="/vender" className="hover:underline">
             Vender
           </Link>
         </div>
