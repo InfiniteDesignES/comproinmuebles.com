@@ -44,7 +44,7 @@ export default function TipoVivienda({ toggleComponent }) {
             className={`w-6/12 h-[3px] bg-[var(--color-borde)] my-4 rounded-md hoverDivisorFormulario ${hovers[0] ? 'divDisivorFormulario' : ''
               }`}
           ></div>
-          <p className={` font-medium ${hovers[0] ? 'divDisivorFormulario' : ''
+          <p className={` font-medium ${hovers[0] ? 'divDisivorFormularioTexto' : ''
             }`}>Chalet</p>
         </div>
         <div className="flex flex-col items-center justify-center w-full">
@@ -65,7 +65,7 @@ export default function TipoVivienda({ toggleComponent }) {
             className={`w-6/12 h-[3px] bg-[var(--color-borde)] my-4 rounded-md hoverDivisorFormulario ${hovers[1] ? 'divDisivorFormulario' : ''
               }`}
           ></div>
-          <p className={` font-medium ${hovers[1] ? 'divDisivorFormulario' : ''
+          <p className={` font-medium ${hovers[1] ? 'divDisivorFormularioTexto' : ''
             }`}>Piso</p>
         </div>
       </div>
