@@ -27,44 +27,51 @@ export default function Vender() {
     setMostrarSiguiente(mostrarSiguiente + 1);
   };
 
+  const togglePrevious = () => {
+    if (mostrarSiguiente > 1) {
+      setMostrarSiguiente(mostrarSiguiente - 1);
+    }
+  };
+
+
   const infoViviendaAnimacion = (
     <InformacionVivienda toggleComponent={toggleComponent} />
   )
 
   const tipoViviendaAnimacion = (
-    <TipoVivienda toggleComponent={toggleComponent} />
+    <TipoVivienda toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const relacionExteriorAnimacion = (
-    <RelacionExterior toggleComponent={toggleComponent} />
+    <RelacionExterior toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const metrosCuadradosAnimacion = (
-    <MetrosCuadrados toggleComponent={toggleComponent} />
+    <MetrosCuadrados toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const espaciosPrincipalesAnimacion = (
-    <EspaciosPrincipales toggleComponent={toggleComponent} />
+    <EspaciosPrincipales toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const espaciosComunesAnimacion = (
-    <EspaciosComunes toggleComponent={toggleComponent} />
+    <EspaciosComunes toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const estadoViviendaAnimacion = (
-    <EstadoVivienda toggleComponent={toggleComponent} />
+    <EstadoVivienda toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const porqueVenderAnimacion = (
-    <PorqueVender toggleComponent={toggleComponent} />
+    <PorqueVender toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const enviarContactoAnimacion = (
-    <EnviarContacto toggleComponent={toggleComponent} />
+    <EnviarContacto toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const mensajeFinalAnimacion = (
-    <MensajeFinal toggleComponent={toggleComponent} />
+    <MensajeFinal toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
   )
 
   const renderFormulario = () => {

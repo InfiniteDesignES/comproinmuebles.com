@@ -4,7 +4,7 @@ import { useState, useContext } from 'react';
 
 import { Context } from '../../../pages/Vender.jsx';
 
-export default function EstadoVivienda({ toggleComponent }) {
+export default function EstadoVivienda({ toggleComponent, togglePrevious }) {
     const { formulario, setFormulario } = useContext(Context);
     const [selected, setSelected] = useState(null);
     const [estado, setEstado] = useState();
@@ -31,7 +31,10 @@ export default function EstadoVivienda({ toggleComponent }) {
     };
 
     return (
-        <div className="relacionExterior max-w-[770px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
+        <div className="relacionExterior max-w-[770px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8 relative">
+            <button type="button" className="absolute top-0 left-0 px-4" onClick={togglePrevious}>
+                <img className='transform rotate-90' src="icons/arrowopen.svg" alt="Volver" />
+            </button>
             <h3 className="text-2xl ">Estado de la vivienda</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center">
