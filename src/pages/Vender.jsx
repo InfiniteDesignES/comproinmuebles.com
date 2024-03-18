@@ -30,7 +30,7 @@ export default function Vender() {
 
   const enviarFormulario = (formularioInfo) => {
     axios
-      .post('https://api.comproinmuebles.com/contacto', {
+      .post('http://api.comproinmuebles.com/contacto', {
         formulario: formularioInfo
       })
       .then(function (response) {
