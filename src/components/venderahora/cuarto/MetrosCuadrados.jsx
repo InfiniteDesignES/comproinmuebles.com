@@ -33,7 +33,7 @@ export default function MetrosCuadrados({ toggleComponent }) {
 
     return (
         <div className="relacionExterior max-w-[620px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-center gap-10 flex-col bg-900">
-            <h3 className="text-2xl font-semibold">Superficie de la vivienda (m2)</h3>
+            <h3 className="text-2xl">Superficie de la vivienda (m2)</h3>
             <span> {sliderValue == 150 ? "+" : ""} {sliderValue}m2</span>
             <form onSubmit={handleSubmit(onFormSubmit)} className='w-full flex flex-col gap-4 items-center justify-center'>
                 <div className='w-full flex items-center justify-center relative'>

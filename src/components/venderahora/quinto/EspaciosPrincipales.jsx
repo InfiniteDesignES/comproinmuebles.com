@@ -33,7 +33,7 @@ export default function EspaciosPrincipales({ toggleComponent }) {
 
     return (
         <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col">
-            <h3 className="text-2xl font-semibold">Espacios principales</h3>
+            <h3 className="text-2xl">Espacios principales</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center px-8">
                     <div
@@ -75,6 +75,7 @@ export default function EspaciosPrincipales({ toggleComponent }) {
             <form onSubmit={handleSubmit(onFormSubmit)} className='w-full flex flex-col gap-4 items-center justify-center'>
                 <button type="submit" className="mt-8 h-9 w-40 rounded-md bg-gradient-to-r from-400 via-600 to-800 bg-size-200 bg-pos-0 text-[var(--blanco)] transition-all duration-150 hover:bg-pos-50 active:bg-pos-100">Continuar</button>
             </form>
+
         </div>
     )
 }
