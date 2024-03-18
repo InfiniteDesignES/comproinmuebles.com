@@ -32,7 +32,7 @@ export default function EspaciosPrincipales({ toggleComponent }) {
     };
 
     return (
-        <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col">
+        <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
             <h3 className="text-2xl">Espacios principales</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center px-8">
