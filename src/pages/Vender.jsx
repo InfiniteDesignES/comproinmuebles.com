@@ -1,4 +1,5 @@
 import { useState, createContext } from 'react';
+import axios from 'axios';
 
 import Header from '../layout/Header';
 
@@ -26,13 +27,25 @@ export default function Vender() {
   const toggleComponent = () => {
     setMostrarSiguiente(mostrarSiguiente + 1);
   };
-
+  
   const togglePrevious = () => {
     if (mostrarSiguiente > 1) {
       setMostrarSiguiente(mostrarSiguiente - 1);
     }
   };
 
+  const enviarFormulario = (formularioInfo) => {
+    axios
+      .post('http://api.comproinmuebles.com/contacto', {
+        formulario: formularioInfo
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   const infoViviendaAnimacion = (
     <InformacionVivienda toggleComponent={toggleComponent} />
@@ -75,38 +88,37 @@ export default function Vender() {
   )
 
   const renderFormulario = () => {
-    console.log(formulario)
+    console.log(formulario);
     switch (mostrarSiguiente) {
       case 1:
-        return infoViviendaAnimacion
+        return infoViviendaAnimacion;
       case 2:
-        return tipoViviendaAnimacion
+        return tipoViviendaAnimacion;
       case 3:
-        return relacionExteriorAnimacion
+        return relacionExteriorAnimacion;
       case 4:
-        return metrosCuadradosAnimacion
+        return metrosCuadradosAnimacion;
       case 5:
-        return espaciosPrincipalesAnimacion
+        return espaciosPrincipalesAnimacion;
       case 6:
-        return espaciosComunesAnimacion
+        return espaciosComunesAnimacion;
       case 7:
-        return estadoViviendaAnimacion
+        return estadoViviendaAnimacion;
       case 8:
-        return porqueVenderAnimacion
+        return porqueVenderAnimacion;
       case 9:
-        return enviarContactoAnimacion
+        return enviarContactoAnimacion;
       case 10:
-        return mensajeFinalAnimacion
+        enviarFormulario(formulario);
+        return mensajeFinalAnimacion;
     }
-  }
+  };
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-[url('images/Background2.svg')] bg-cover pt-20">
       <Header />
-      <div className='w-full flex items-center justify-center'>
-        <Context.Provider value={{ formulario, setFormulario }}>
-          {renderFormulario()}
-        </Context.Provider>
+      <div className="flex w-full items-center justify-center">
+        <Context.Provider value={{ formulario, setFormulario }}>{renderFormulario()}</Context.Provider>
       </div>
     </main>
   );
