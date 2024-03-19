@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 import { Context } from '../../../pages/Vender.jsx';
 
-export default function EnviarContacto({ toggleComponent }) {
+export default function EnviarContacto({ toggleComponent, togglePrevious }) {
     const { formulario, setFormulario } = useContext(Context);
     const {
         register,
@@ -22,7 +22,10 @@ export default function EnviarContacto({ toggleComponent }) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col px-8 py-4 bg-[var(--fondo-informacion-vivienda)]">
+        <form onSubmit={handleSubmit(onFormSubmit)} className="max-w-[800px] border border-[var(--color-borde)] rounded-lg flex flex-col p-8 bg-[var(--fondo-informacion-vivienda)] relative">
+            <button type="button" className="absolute top-0 left-0 px-4" onClick={togglePrevious}>
+                <img className='transform rotate-90' src="icons/arrowopen.svg" alt="Volver" />
+            </button>
             <span className="text-2xl font-bold">Enviar contacto</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                 <label htmlFor="direccion" className="text-[11px] mt-2 ">

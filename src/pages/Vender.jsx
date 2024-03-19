@@ -27,6 +27,12 @@ export default function Vender() {
   const toggleComponent = () => {
     setMostrarSiguiente(mostrarSiguiente + 1);
   };
+  
+  const togglePrevious = () => {
+    if (mostrarSiguiente > 1) {
+      setMostrarSiguiente(mostrarSiguiente - 1);
+    }
+  };
 
   const enviarFormulario = (formularioInfo) => {
     axios
@@ -41,25 +47,45 @@ export default function Vender() {
       });
   };
 
-  const infoViviendaAnimacion = <InformacionVivienda toggleComponent={toggleComponent} />;
+  const infoViviendaAnimacion = (
+    <InformacionVivienda toggleComponent={toggleComponent} />
+  )
 
-  const tipoViviendaAnimacion = <TipoVivienda toggleComponent={toggleComponent} />;
+  const tipoViviendaAnimacion = (
+    <TipoVivienda toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const relacionExteriorAnimacion = <RelacionExterior toggleComponent={toggleComponent} />;
+  const relacionExteriorAnimacion = (
+    <RelacionExterior toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const metrosCuadradosAnimacion = <MetrosCuadrados toggleComponent={toggleComponent} />;
+  const metrosCuadradosAnimacion = (
+    <MetrosCuadrados toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const espaciosPrincipalesAnimacion = <EspaciosPrincipales toggleComponent={toggleComponent} />;
+  const espaciosPrincipalesAnimacion = (
+    <EspaciosPrincipales toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const espaciosComunesAnimacion = <EspaciosComunes toggleComponent={toggleComponent} />;
+  const espaciosComunesAnimacion = (
+    <EspaciosComunes toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const estadoViviendaAnimacion = <EstadoVivienda toggleComponent={toggleComponent} />;
+  const estadoViviendaAnimacion = (
+    <EstadoVivienda toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const porqueVenderAnimacion = <PorqueVender toggleComponent={toggleComponent} />;
+  const porqueVenderAnimacion = (
+    <PorqueVender toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const enviarContactoAnimacion = <EnviarContacto toggleComponent={toggleComponent} />;
+  const enviarContactoAnimacion = (
+    <EnviarContacto toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
-  const mensajeFinalAnimacion = <MensajeFinal toggleComponent={toggleComponent} />;
+  const mensajeFinalAnimacion = (
+    <MensajeFinal toggleComponent={toggleComponent} togglePrevious={togglePrevious} />
+  )
 
   const renderFormulario = () => {
     console.log(formulario);
