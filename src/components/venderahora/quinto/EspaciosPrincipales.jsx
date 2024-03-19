@@ -6,7 +6,7 @@ import EspaciosPrincipalesBoton from "./EspaciosPrincipalesBoton";
 
 import { Context } from '../../../pages/Vender.jsx';
 
-export default function EspaciosPrincipales({ toggleComponent }) {
+export default function EspaciosPrincipales({ toggleComponent, togglePrevious }) {
     const { formulario, setFormulario } = useContext(Context);
     const [cantidadHabitaciones, setCantidadHabitaciones] = useState(0);
     const [cantidadBanos, setCantidadBanos] = useState(0);
@@ -32,7 +32,11 @@ export default function EspaciosPrincipales({ toggleComponent }) {
     };
 
     return (
-        <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
+
+        <div className="relacionExterior max-w-[1050px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8 relative">
+            <button type="button" className="absolute top-0 left-0 px-4" onClick={togglePrevious}>
+                <img className='transform rotate-90' src="icons/arrowopen.svg" alt="Volver" />
+            </button>
             <h3 className="text-2xl">Espacios principales</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center px-8">

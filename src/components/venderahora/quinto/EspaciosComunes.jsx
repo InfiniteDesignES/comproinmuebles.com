@@ -4,7 +4,7 @@ import { useState, useContext } from 'react';
 
 import { Context } from '../../../pages/Vender.jsx';
 
-export default function EspaciosComunes({ toggleComponent }) {
+export default function EspaciosComunes({ toggleComponent, togglePrevious }) {
     const { formulario, setFormulario } = useContext(Context);
     const [terraza, setTerraza] = useState(0);
     const [balcon, setBalcon] = useState(0);
@@ -28,7 +28,10 @@ export default function EspaciosComunes({ toggleComponent }) {
     };
 
     return (
-        <div className="relacionExterior max-w-[1120px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8">
+        <div className="relacionExterior max-w-[1120px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-around flex-col py-8 relative">
+            <button type="button" className="absolute top-0 left-0 px-4" onClick={togglePrevious}>
+                <img className='transform rotate-90' src="icons/arrowopen.svg" alt="Volver" />
+            </button>
             <h3 className="text-2xl ">Espacios comunes</h3>
             <div className="grid grid-cols-1 md:grid-cols-6 w-full h-full">
                 <div className="flex flex-col w-full items-center justify-center">

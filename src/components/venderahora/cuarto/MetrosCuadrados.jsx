@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 
 import { Context } from '../../../pages/Vender.jsx';
 
-export default function MetrosCuadrados({ toggleComponent }) {
+export default function MetrosCuadrados({ toggleComponent, togglePrevious }) {
     const { formulario, setFormulario } = useContext(Context);
     const [sliderValue, setSliderValue] = useState(75);
 
@@ -32,7 +32,10 @@ export default function MetrosCuadrados({ toggleComponent }) {
     };
 
     return (
-        <div className="relacionExterior max-w-[620px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-center gap-10 flex-col bg-900">
+        <div className="relacionExterior max-w-[620px] w-full min-h-[320px] h-full bg-[var(--fondo-informacion-vivienda)] rounded-md flex items-center justify-center gap-10 flex-col bg-900 relative">
+            <button type="button" className="absolute top-0 left-0 px-4" onClick={togglePrevious}>
+                <img className='transform rotate-90' src="icons/arrowopen.svg" alt="Volver" />
+            </button>
             <h3 className="text-2xl">Superficie de la vivienda (m2)</h3>
             <span> {sliderValue == 150 ? "+" : ""} {sliderValue}m2</span>
             <form onSubmit={handleSubmit(onFormSubmit)} className='w-full flex flex-col gap-4 items-center justify-center'>
