@@ -12,7 +12,7 @@ export default function PreguntasFrecuentes({ pregunta, respuesta }) {
   return (
     <>
       <div className="my-6 py-6 border-600 border-b-4 rounded-sm">
-        <div className="text-center w-[350px]" onClick={toggleVisibility}>
+        <div className="flex text-center w-[350px] h-[250px]" onClick={toggleVisibility}>
           <div className="flex justify-between items-center gap-2">
             <div className="flex gap-4">
               <img src="icons/bubblechat.svg" alt="" />
