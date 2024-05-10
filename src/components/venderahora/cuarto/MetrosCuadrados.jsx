@@ -37,12 +37,12 @@ export default function MetrosCuadrados({ toggleComponent, togglePrevious }) {
                 <img className='transform rotate-90' src="icons/arrowopen.svg" alt="Volver" />
             </button>
             <h3 className="text-2xl">Superficie de la vivienda (m2)</h3>
-            <span> {sliderValue == 150 ? "+" : ""} {sliderValue}m2</span>
+            <span> {sliderValue == 300 ? "+" : ""} {sliderValue}m2</span>
             <form onSubmit={handleSubmit(onFormSubmit)} className='w-full flex flex-col gap-4 items-center justify-center'>
                 <div className='w-full flex items-center justify-center relative'>
                     <span className='absolute left-0 bottom-[-25px] mx-4 md:mx-12'>0m2</span>
-                    <span className='absolute right-0 bottom-[-25px] mx-4 md:mx-12'>+150m2</span>
-                    <Slider.Root className="SliderRoot w-full" defaultValue={[75]} max={150} step={1} onValueChange={handleSliderChange}>
+                    <span className='absolute right-0 bottom-[-25px] mx-4 md:mx-12'>+300m2</span>
+                    <Slider.Root className="SliderRoot w-full" defaultValue={[75]} max={300} step={1} onValueChange={handleSliderChange}>
                         <Slider.Track className="SliderTrack w-full">
                             <Slider.Range className="SliderRange bg-600" />
                         </Slider.Track>

@@ -30,22 +30,22 @@ export default function EnviarContacto({ toggleComponent, togglePrevious }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                 <label htmlFor="direccion" className="text-[11px] mt-2 ">
                     <span className="text-[var(--color-texto-secundario)]">Nombre <span className="text-[var(--color-rojo)]">*</span></span>
-                    <input type="text" {...register("nombre", { required: true })} id="nombre" className="w-full h-10 pl-4" />
+                    <input type="text" {...register("nombre", { required: true })} placeholder="Tu nombre" id="nombre" className="w-full h-10 pl-4" />
                 </label>
                 <label htmlFor="apellidos" className="text-[11px] mt-2 ">
                     <span className="text-[var(--color-texto-secundario)]">Apellidos <span className="text-[var(--color-rojo)]">*</span></span>
-                    <input type="text" {...register("apellidos", { required: true })} id="apellidos" className="w-full h-10 pl-4" />
+                    <input type="text" {...register("apellidos", { required: true })} placeholder="Tu correo electrónico" id="apellidos" className="w-full h-10 pl-4" />
                 </label>
             </div>
             <label htmlFor="direccion" className="text-[11px] mt-2 ">
                 <span className="text-[var(--color-texto-secundario)]">Correo electrónico <span className="text-[var(--color-rojo)]">*</span></span>
-                <input type="email" {...register("email", { required: true })} id="email" className="w-full h-10 pl-4" />
+                <input type="email" {...register("email", { required: true })} placeholder="Tu correo electrónico" id="email" className="w-full h-10 pl-4" />
             </label>
             <div className="w-full text-[11px] mt-2">
                 <span className="text-[var(--color-texto-secundario)]">Telefono <span className="text-[var(--color-rojo)]">*</span></span>
                 <div className="flex w-full gap-2">
-                    <input onChange={(e) => { changePrefijo(e) }} maxLength={4} type="text" {...register("prefijo", { required: true })} id="prefijo" className="w-[20%] h-10 pl-4" />
-                    <input type="number" {...register("telefono", { required: true })} id="telefono" className="w-[80%] h-10 pl-4" />
+                    <input onChange={(e) => { changePrefijo(e) }} placeholder="Tu prefijo" maxLength={4} type="text" {...register("prefijo", { required: true })} id="prefijo" className="w-[20%] h-10 pl-4" />
+                    <input type="number" {...register("telefono", { required: true })} placeholder="Tu teléfono" id="telefono" className="w-[80%] h-10 pl-4" />
                 </div>
 
             </div>
